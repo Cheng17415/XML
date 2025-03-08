@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libros>
+    <libro titulo="Cien años de soledad">
+        <autor>Gabriel García Márquez</autor>
+        <!--Género: Realista mágico -->
+    </libro>
+    <libro titulo="1984">
+        <autor>George Orwell</autor>
+        <!--Género: Distópico -->
+    </libro>
+    <libro titulo="El gran Gatsby">
+        <autor>F. Scott Fitzgerald</autor>
+        <!--Género: Clásico -->
+    </libro>
+ 
+</libros>

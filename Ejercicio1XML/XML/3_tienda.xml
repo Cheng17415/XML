@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="..\CSS\3_libros.css"?> 
+<tienda>
+    <producto>
+        <nombre>Chuche</nombre>
+        <precio>0.15</precio>
+    </producto>
+    <producto>
+        <nombre>Coca</nombre>
+        <precio>5</precio>
+    </producto>
+    <producto>
+        <nombre>Leche</nombre>
+        <precio>1.5</precio>
+    </producto>
+</tienda>

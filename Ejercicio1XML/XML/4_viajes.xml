@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="..\CSS\4_estilo-viajes.css"?> 
+<viajes>
+    <viaje>
+        <destino>París</destino>
+        <transporte>Avión</transporte>
+    </viaje>
+    
+    <viaje>
+        <destino>Tokio</destino>
+        <transporte>Tren bala </transporte>
+    </viaje>
+    
+    <viaje>
+        <destino>Barcelona</destino>
+        <transporte>Coche</transporte>
+    </viaje>
+
+</viajes>
