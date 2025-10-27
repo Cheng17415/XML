@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventos>
+    <evento xmlns="http://www.ejemplo.com/futbol">
+        <nombre>Final Champions</nombre>
+        <fecha>
+            <dia>20</dia>
+            <mes>10</mes>
+            <anio>2024</anio>
+        </fecha>
+        <ubicacion>Estadio de Wembley</ubicacion>
+        <equipo_ganador>
+            <nombre>Barcelona</nombre>
+            <pais>España</pais>
+            <goles>3</goles>
+        </equipo_ganador>
+    </evento>
+    <bal:evento xmlns:bal="http://www.ejemplo.com/baloncesto">
+        <bal:nombre>Jornada 23 Liga Endesa</bal:nombre>
+        <bal:fecha>
+            <bal:dia>16</bal:dia>
+            <bal:mes>3</bal:mes>
+            <bal:anio>2025</bal:anio>
+        </bal:fecha>
+        <bal:ubicacion>Movistar Arena</bal:ubicacion>
+        <bal:mvp>
+            <bal:nombre>Facundo Campazzo</bal:nombre>
+            <bal:equipo>Real Madrid</bal:equipo>
+        </bal:mvp>
+    </bal:evento>
+</eventos>

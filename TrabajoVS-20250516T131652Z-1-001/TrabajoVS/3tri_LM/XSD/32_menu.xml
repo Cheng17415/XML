@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="32_menu.xsd"> 
+ <plato> 
+   <nombre>Ensalada César</nombre> 
+   <precio>12.99</precio> 
+ </plato> 
+ <plato> 
+   <descripcion>Sopa de verduras (vegetariana)</descripcion> 
+   <precio>8.50</precio> 
+ </plato> 
+</menu> 

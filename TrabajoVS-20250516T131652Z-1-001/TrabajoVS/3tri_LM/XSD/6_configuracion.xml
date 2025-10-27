@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<configuracion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:noNamespaceSchemaLocation="6_configuracion.xsd"> 
+  <sensor id="S001" tipo="Sensor" activo="true"/> 
+  <sensor id="S002" activo="false"/> 
+</configuracion>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="31_productos.xsd"> 
+  <producto id="101" categoria="Electrónica"> 
+    <nombre>Smartphone XYZ Pro</nombre> 
+    <precio>699.99</precio> 
+    <especificaciones> 
+      <pantalla>6.5"</pantalla> 
+      <bateria>5000mAh</bateria>
+    </especificaciones> 
+  </producto> 
+</productos>

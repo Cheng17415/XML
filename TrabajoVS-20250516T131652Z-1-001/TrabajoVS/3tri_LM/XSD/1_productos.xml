@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<producto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="1_productos.xsd">
+    <nombre_producto>Smartphone XYZ Pro</nombre_producto>
+    <fecha_lanzamiento>2023-08-15</fecha_lanzamiento>
+    <precio>699.99</precio>
+    <en_stock>false</en_stock>
+</producto>

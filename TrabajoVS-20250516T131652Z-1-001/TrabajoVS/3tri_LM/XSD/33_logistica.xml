@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logistica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:noNamespaceSchemaLocation="33_logistica.xsd"> 
+ <nombre>Centro Logístico Sur</nombre> 
+ <envíos> 
+   <envío código="ENV-101" estado="R"> 
+     <diario/> 
+     <origen>Buenos Aires</origen> 
+     <destino>São Paulo</destino> 
+     <hora-salida>08:30:00</hora-salida> 
+     <hora-llegada>10:45:00</hora-llegada> 
+   </envío> 
+   <envío código="ENV-202" estado="T"> 
+     <origen>Bogotá</origen> 
+     <destino>Madrid</destino> 
+     <hora-salida>12:00:00</hora-salida> 
+     <hora-llegada>14:00:00</hora-llegada> 
+   </envío> 
+ </envíos> 
+ <fecha>2023-11-15</fecha> 
+</logistica>

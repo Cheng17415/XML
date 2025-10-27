@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation="35_registro.xsd"> 
+
+ <usuario identificador="US-101"> 
+   <nombre-completo>Pérez, Juan Carlos</nombre-completo> 
+   <correo>juan@empresa.com</correo> 
+   <sesiones> 
+     <sesión fecha="2023-11-15" hora="09:00:00">3600</sesión> 
+   </sesiones> 
+ </usuario> 
+
+ <colaborador identificador="CL-202"> 
+   <nombre-completo>García, María</nombre-completo> 
+   <correo>maria@empresa.com</correo> 
+   <departamento> 
+     <soporte/>
+   </departamento> 
+   <sesiones> 
+     <sesión fecha="2023-11-15" hora="10:00:00">1800</sesión> 
+   </sesiones> 
+ </colaborador> 
+
+</registro> 

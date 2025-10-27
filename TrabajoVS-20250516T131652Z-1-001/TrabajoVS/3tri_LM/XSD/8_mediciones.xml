@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mediciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="8_mediciones.xsd"> 
+    <medicion> 
+       <numero_serie>SN-001</numero_serie>
+       <valor>25.5</valor> 
+    </medicion> 
+    <medicion> 
+       <numero_serie>SN-002</numero_serie> 
+       <valor>30.12</valor> 
+    </medicion> 
+</mediciones>
+  

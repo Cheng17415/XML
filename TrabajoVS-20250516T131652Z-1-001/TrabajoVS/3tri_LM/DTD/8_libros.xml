@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE libros [ 
+  <!ELEMENT libros (novela, poema, ensayo, otro)+> 
+  <!ELEMENT novela (#PCDATA)> 
+     <!ATTLIST novela autor CDATA #REQUIRED> 
+  <!ELEMENT poema (#PCDATA)> 
+     <!ATTLIST poema autor CDATA #REQUIRED> 
+  <!ELEMENT ensayo (#PCDATA)> 
+     <!ATTLIST ensayo autor CDATA #IMPLIED> 
+  <!ELEMENT otro EMPTY> 
+     <!ATTLIST otro tipo CDATA #REQUIRED> 
+]> 
+
+<libros> 
+  <novela autor="Orwell">1984</novela> 
+  <poema autor="Garcilaso de la Vega">Poesías completas</poema> 
+  <ensayo>El origen de las especies</ensayo> 
+  <otro tipo="teatro"/> 
+</libros> 

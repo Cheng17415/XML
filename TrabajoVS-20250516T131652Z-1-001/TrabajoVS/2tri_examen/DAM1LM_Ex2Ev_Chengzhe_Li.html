@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<style>
+    /*Ejercicio 1*/
+
+    /*Propiedades de los h1*/
+    h1 {
+        text-align: center;
+        color: blue;
+
+        /*Para hacer el degradado, hace falta que "background-image" tenga con valor "linear-gradient", y especifico "to right" para que vaya de izquierda a derecha*/
+        background-image: linear-gradient(to right, red, yellow);
+
+        /*Sombra del texto*/
+        text-shadow: 2px 2px 5px black;
+    }
+
+    /*Propiedades de los párrafos*/
+    .ej1 {
+        /*Espaciado entre letras*/
+        letter-spacing: 2px;
+
+        /*Altura de línea*/
+        line-height: 1.5;
+
+        /*Transformo la primera letra de cada palabra a mayúscula*/
+        text-transform: capitalize;
+    }
+
+    /*Ejercicio 2*/
+
+    /*Propiedades que afectan al div del ejercicio 2*/
+    .ej2 {
+        width: 50%;
+        border: 3px solid green;
+        border-radius: 8px;
+        padding: 20px;
+
+        /*Centrar horizontalmente*/
+        margin: auto;
+
+        /*Para que el ancho incluya padding y borde*/
+        box-sizing: border-box;
+    }
+
+    /*Ejercicio 3*/
+
+    /*Propiedades del contener flexible*/
+    .flex-container {
+        border: 1px solid black;
+
+        /*Activar el flexbox*/
+        display: flex;
+
+        /*Ya que lo necesito en filas, cada item, necesito que la dirección del flex sea en columna*/
+        flex-direction: column;
+
+        /*Espacio igual entre ellos en eje principal*/
+        justify-content: space-around;
+
+        /*Alinear los div en el centro*/
+        align-items: center;
+    }
+
+    /*Propiedades de los div dentro del flexbox*/
+    .item {
+        background-color: gray;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        width: 80%;
+    }
+
+    /*Propiedades del segundo item dentro del flexbox*/
+    .item.segundo {
+        /*Alinear al final del contenedor*/
+        align-self: flex-end;
+    }
+
+    /*Ejercicio 4*/
+
+    /*Propiedades del grid container*/
+    .grid-container {
+        border: 1px solid black;
+
+        /*Para que funcione el contenedor de grid*/
+        display: grid;
+
+        /*Definir las filas y columnas del grid*/
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /*Propiedades de los grid item*/
+    .grid-item {
+        text-align: center;
+        background-color: red;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    /*Propiedades del primer grid item*/
+    .grid-1 {
+        /*Para que ocupe dos columnas*/
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    /* Ejercicio 5*/
+
+    /*Para que solo afecte a los input de tipo submit*/
+    input[type=submit] {
+        background-color: green;
+        border: none;
+        color: white;
+    }
+</style>
+
+<body>
+    <!--Ejercicio 1-->
+    <h1>Examen de CSS</h1>
+    <p class="ej1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias excepturi error quibusdam
+        obcaecati, repudiandae dolorum expedita labore pariatur maiores, distinctio a consequuntur doloribus
+        voluptatibus porro eos sequi quis, incidunt laboriosam.</p>
+
+    <h2>Ejercicio 1: Texto y Fondo</h2>
+    <h1>Encabezado de Ejemplo</h1>
+    <p class="ej1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eligendi id magnam nam, suscipit
+        rerum modi facere, quaerat at dolores illum illo, cumque ipsum fugiat consequuntur dolore quidem minus
+        exercitationem.</p>
+    <!--Ejercicio 2-->
+    <h2>Ejercicio 2: Bordes y Box Sizing</h2>
+    <div class="ej2">Este es un div con bordes redondeados y box-sizing: border-box</div>
+    <!--Ejercicio 3-->
+    <h2>Ejercicio 3:Flexbox</h2>
+    <div class="flex-container">
+        <div class="item primero">Ítem 1</div>
+        <div class="item segundo">Ítem 2</div>
+        <div class="item tercero">Ítem 3</div>
+    </div>
+    <!--Ejercicio 4-->
+    <h2>Ejercicio 4: Grid Layout</h2>
+    <div class="grid-container">
+        <div class="grid-item grid-1">Ítem 1 (extendido)</div>
+        <div class="grid-item">Ítem 2</div>
+        <div class="grid-item">Ítem 3</div>
+        <div class="grid-item">Ítem 4</div>
+        <div class="grid-item">Ítem 5</div>
+        <div class="grid-item">Ítem 6</div>
+    </div>
+    <!--Ejercicio 5-->
+    
+    <h2>Ejercicio 5: Formularios e Inputs con Ícono</h2>
+
+    <!--La acción del formulario está vacío ya que no tengo un servidor al que enviar datos y el método también está vacío aunque puede tener valor de post o get -->
+    <form action="" method="">
+        <!--También he creado los labels vacío por si hace falta-->
+        <label for="search"></label>
+        <input type="search" name="search" placeholder="Buscar...">
+        <label for="submit"></label>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

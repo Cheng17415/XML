@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-clases, Margen y Relleno</title>
+    <style>
+        /* Pseudo-clases :nth-child, odd, even, An+B, first-child, last-child */
+        ul li:nth-child(odd) {
+            background-color: aqua;
+        }
+
+        ul li:nth-child(even) {
+            background-color: brown;
+        }
+
+        ul li:nth-child(3n+4) {
+            background-color: blue;
+        }
+
+        ul li:first-child {
+            background-color: navajowhite;
+        }
+
+        ul li:last-child {
+            background-color: chocolate;
+        }
+
+        /* Márgenes: margin-top, margin-left, margin-right, margin-bottom */
+        .margen-auto {
+            margin: auto;
+            width: 50%;
+            border: 1px solid #000;
+        }
+
+        .margen-length {
+            margin: 25px 50px 75px 100px;
+            background-color: #f5f5f5;
+            border: 1px dashed #ccc;
+        }
+
+        .margen-collapse {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: 1px solid #000;
+        }
+
+        /* Rellenos: padding-top, padding-left, padding-right, padding-bottom */
+        .relleno-length {
+            padding: 25px 50px 75px 100px;
+            background-color: blanchedalmond;
+        }
+
+        .relleno-percent {
+            background-color: beige;
+            padding: 10% 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-clases, Márgenes y Rellenos en CSS</h1>
+    <section>
+        <h2>Pseudo-clases :nth-child, odd, even, etc.</h2>
+        <ul>
+            <li>Primer elemento (usa :first-child)</li>
+            <li>Segundo elemento</li>
+            <li>Tercer elemento</li>
+            <li>Cuarto elemento (cumple con 3n+4)</li>
+            <li>Quinto elemento</li>
+            <li>Sexto elemento (par)</li>
+            <li>Séptimo elemento</li>
+            <li>Último elemento (usa :last-child)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Propiedad margin</h2>
+        <div class="margen-auto">
+            Ejemplo con <code>margin: auto;</code>
+        </div>
+
+        <div class="margen-length">
+            Ejemplo con <code>margin: 25px 50px 75px 100px;</code>
+        </div>
+
+        <div class="margen-collapse">
+            Ejemplo con <code>margin-collapse</code> (márgenes adyacentes colapsados)
+        </div>
+    </section>
+
+    <section>
+        <h2>Propiedad padding</h2>
+        <div class="relleno-length">
+            Ejemplo con <code>padding: 25px 50px 75px 100px;</code>
+        </div>
+
+        <div class="relleno-percent">
+            Ejemplo con <code>padding: 10% 5%;</code>
+        </div>
+    </section>
+</body>
+
+</html>
+
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:group name="datosHotel">
+        <xs:all>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="teléfono">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{9}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="dirección" type="xs:string" />
+        </xs:all>
+    </xs:group>
+
+    <xs:group name="datosReserva">
+        <xs:all>
+            <xs:element name="fecha" type="xs:date" />
+            <xs:element name="huésped" type="xs:string" />
+            <xs:element name="días" type="xs:positiveInteger" />
+        </xs:all>
+    </xs:group>
+
+    <xs:attributeGroup name="atrReserva">
+        <xs:attribute name="código">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="RES-\d{3}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <!-- XSD principal-->
+    <xs:element name="reservas">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="hotel">
+                    <xs:complexType>
+                        <xs:group ref="datosHotel" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="reserva">
+                    <xs:complexType>
+                        <xs:group ref="datosReserva" />
+                        <xs:attributeGroup ref="atrReserva" />
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

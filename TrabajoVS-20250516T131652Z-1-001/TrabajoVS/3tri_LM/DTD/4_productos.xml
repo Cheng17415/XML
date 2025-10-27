@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE productos [ 
+  <!ELEMENT productos (producto)+> 
+  <!ELEMENT producto (nombre, ingredientes*)> 
+  <!ELEMENT nombre (#PCDATA)> 
+  <!ELEMENT ingredientes (#PCDATA)> 
+]> 
+
+<productos> 
+  <producto> 
+     <nombre>Ensalada César</nombre> 
+     <ingredientes>Lechuga</ingredientes> 
+     <ingredientes>Pollo</ingredientes>
+     <ingredientes>Pimiento</ingredientes> 
+  </producto> 
+</productos> 

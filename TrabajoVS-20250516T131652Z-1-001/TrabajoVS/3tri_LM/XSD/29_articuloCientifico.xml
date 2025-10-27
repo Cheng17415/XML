@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articulo doi="10.1234/abcd123" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="29_articuloCientifico.xsd"> 
+ <titulo>Estudio sobre IA</titulo> 
+ <autor>Dr. Juan Pérez</autor> 
+ <fecha>2023-10-05</fecha> 
+ <palabras_clave>IA</palabras_clave> 
+ <palabras_clave>Algoritmos</palabras_clave> 
+</articulo> 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        table{
+            width: 50%;
+        }
+        th, td{ 
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th{
+            background-color:green;
+            color: white;
+        }
+        th:hover,td:hover{
+            background-color: crimson;
+            color:wheat;
+        }
+        tr:nth-child(even){
+            background-color: rgb(99, 99, 252);
+        }
+    </style>
+</head>
+<body>
+    <div style="overflow-x: auto;">
+        <table>
+            <tr>
+                <th>NOMBRE</td>
+                <th>APELLIDO</td>
+                <th>EDAD</td>
+                <th>NACIONALIDAD</td>
+            </tr>
+            <tr>
+                <td>Pepe</td>
+                <td>Pérez</td>
+                <td>25</td>
+                <td>Español</td>
+            </tr>
+            <tr>
+                <td>Manolo</td>
+                <td>García</td>
+                <td>30</td>
+                <td>Francés</td>
+            </tr>
+            <tr>
+                <td>Antonio</td>
+                <td>Jimenez</td>
+                <td>35</td>
+                <td>Italiano</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE libros [ 
+  <!ELEMENT libros (libro)*> 
+  <!ELEMENT libro ((ISBN | titulo), precio)> 
+  <!ELEMENT ISBN (#PCDATA)> 
+  <!ELEMENT titulo (#PCDATA)> 
+  <!ELEMENT precio (#PCDATA)> 
+]>
+
+<libros> 
+  <libro> 
+     <ISBN>978-3-16-148410-0</ISBN> 
+     <precio>15</precio> 
+  </libro> 
+  <libro> 
+     <titulo>Cien años de soledad</titulo> 
+     <precio>10</precio> 
+  </libro> 
+</libros> 

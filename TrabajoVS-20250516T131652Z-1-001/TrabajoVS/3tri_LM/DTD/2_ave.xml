@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE ave [ 
+  <!ELEMENT ave (nombre, especie, extinto)> 
+  <!ELEMENT nombre (#PCDATA)> 
+  <!ELEMENT especie (#PCDATA)> 
+  <!ELEMENT extinto EMPTY> 
+]>
+
+<ave> 
+  <nombre>Pelícano</nombre> 
+  <especie>Pelecanus occidentalis</especie>
+  <extinto/>
+</ave> 

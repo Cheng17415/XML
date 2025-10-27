@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre_producto" type="xs:string"/>
+                <xs:element name="fecha_lanzamiento" type="xs:date"/>
+                <xs:element name="precio" type="xs:decimal"/>
+                <xs:element name="en_stock" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+        
+    </xs:element>
+</xs:schema>

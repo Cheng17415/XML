@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instrumentos [
+    <!ELEMENT instrumentos (cuerdas, viento, percusion)+>
+    <!ELEMENT cuerdas (#PCDATA)>
+    <!ATTLIST cuerdas tipo CDATA #REQUIRED>
+    <!ELEMENT viento EMPTY>
+    <!ATTLIST viento marca CDATA #REQUIRED>
+    <!ELEMENT percusion (#PCDATA)>
+    <!ATTLIST percusion material CDATA #IMPLIED>
+]>
+
+<instrumentos>
+    <cuerdas tipo="violín">Stradivarius</cuerdas>
+    <viento marca="Yamaha" />
+    <percusion material="madera">Bongos</percusion>
+</instrumentos> 

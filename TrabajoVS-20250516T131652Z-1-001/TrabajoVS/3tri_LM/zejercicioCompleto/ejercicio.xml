@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro)+>
+    <!ELEMENT libro (titulo, autor, anno?, genero*, estado?, idioma*, edicion?, sinopsis)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+        <!ATTLIST autor pais CDATA #IMPLIED>   
+    <!ELEMENT anno (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT estado EMPTY>
+    <!ATTLIST estado 
+        prestado (si|no) #REQUIRED 
+        fecha_devolucion CDATA #IMPLIED>
+    <!ELEMENT idioma (#PCDATA)>
+    <!ELEMENT edicion (#PCDATA)>
+    <!ELEMENT sinopsis (#PCDATA)>
+]> -->
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio.xsd">
+    <libro>
+        <titulo>El quijote</titulo>
+        <autor pais="España">Miguel de Cervantes</autor>
+        <anno>1605</anno>
+        <genero>Novela</genero>
+        <estado prestado="si" fecha_devolucion ="2023-05-16"/>
+        <idioma>Inglés</idioma>
+        <idioma>Francés</idioma>
+        <edicion>Primera</edicion>
+        <sinopsis>Un libro sobre las aventuras de un caballero loco.</sinopsis>
+    </libro>
+</biblioteca>

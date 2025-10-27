@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReservaRestaurante</title>
+</head>
+<style>
+    body {
+           
+            margin: 20px;
+            background-color: rgba(44, 42, 42, 0.331);
+        }
+    
+    h1,h2 {
+            text-align: center;
+            
+        }
+    h2{
+        font-weight:lighter;
+    }
+        
+    table,th,td{
+		border: 1px solid black;
+		
+		border-collapse: collapse; 
+        padding: 10px;
+	}
+    table{
+        width: 80%;
+        margin: auto;
+        background-color: rgb(162, 156, 156);
+    }
+
+    th{
+        background-color: gray;
+        text-align: left;
+    }
+    #botones{
+        text-align: center;
+        background-color: white;
+    }
+    table tr:nth-child(odd) {
+            background-color: white;
+        }
+   
+
+    
+</style>
+<body>
+    <h1>Formulario de Reserva</h1>
+    <br>
+    <form>
+        <h2>Detalles de la Reserva</h2>
+        <table> 
+            <tr>
+                <th colspan="2">Datos del Cliente</th>
+            </tr>
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" name="nombre" id="nombre" required></td>
+            </tr>
+            <tr>
+                <td>Apellidos: </td>
+                <td><input type="text" name="Apellido" id="Apellido" required></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" name="correo" id="correo" required></td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Detalles de la Reserva</th>
+            </tr>
+            <tr>
+                <td>Fecha de la Reserva:</td>
+                <td><input type="date"name="Fecha" id="Fecha" required></td>
+                
+            </tr>
+            <tr>
+                <td>Hora de la Reserva:</td>
+                <td><input type="time" name="Hora" id="Hora" required></td>
+            </tr>
+            <tr>
+                <td>Número de Personas:</td>
+                <td><input type="number" name="personas" id="personas" min="1" required></td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Método de Pago</th>
+            </tr>
+            <tr>
+                <td>Método de Pago:</td>
+                <td>
+                    <input type="radio" name="Metodo" id="Tarjeta de Crédito"> Tarjeta de Crédito <br>
+                    <input type="radio" name="Metodo" id="Paypal"> Paypal <br>
+                    <input type="radio" name="Metodo" id="Pago en Efectivo"> Pago en efectivo <br>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Comentarios Adicionales</th>
+            </tr>
+            <tr>
+                <td>Comentarios:</td>
+                <td>
+                    <textarea name="com" id="com" rows="5" cols="50" placeholder="Añade algún comentario o petición especial."></textarea>
+                    </td>
+            </tr>
+            <tr>
+                <th colspan="2" id="botones"><input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar"></th>
+            </tr>
+        </table>
+        
+        <br>
+           
+        
+    </form>
+
+</body>
+</html>

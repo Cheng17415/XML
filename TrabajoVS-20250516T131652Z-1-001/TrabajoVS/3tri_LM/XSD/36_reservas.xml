@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<reservas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation="36_reservas.xsd"> 
+ <hotel> 
+   <nombre>Hotel Luna</nombre> 
+   <teléfono>912345678</teléfono> 
+   <dirección>Calle Principal 123</dirección> 
+ </hotel> 
+ <reserva código="RES-001"> 
+   <fecha>2023-12-25</fecha> 
+   <huésped>Juan Pérez</huésped> 
+   <días>3</días> 
+ </reserva> 
+</reservas> 

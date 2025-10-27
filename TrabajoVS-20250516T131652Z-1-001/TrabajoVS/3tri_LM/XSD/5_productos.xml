@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:noNamespaceSchemaLocation="5_productos.xsd"> 
+  <producto id="101" categoria="Electrónica"> 
+     <nombre>Smartphone XYZ</nombre> 
+     <precio>699.99</precio> 
+  </producto> 
+  <producto id="102" categoria="Hogar"> 
+     <nombre>Aspiradora sin cable</nombre> 
+     <precio>299.50</precio> 
+  </producto> 
+</productos> 

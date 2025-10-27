@@ -1,0 +1,20 @@
+1. ^Capítulo\s\d{1}$
+    "Capítulo 0", "Capítulo 1", "Capítulo 2"... "Capítulo 9". (Solo se permite un dígito).
+2. ^Capítulo\s\d{1,2}$
+    "Capítulo 0", "Capítulo 1", "Capítulo 2"... "Capítulo 99". (Uno o dos dígitos).
+3. ^Capítulo\s[1-9]\d?$
+    "Capítulo 1", "Capítulo 2", "Capítulo 3"... "Capítulo 99". (No se permite "Capítulo 0").
+4. ^Capítulo\s\d+$
+    "Capítulo 0", "Capítulo 1", "Capítulo 2"... "Capítulo 99"... "Capítulo 100"... (Uno o más dígitos).
+5. ^\DZ$
+    Cualquier valor de dos caracteres, cuyo primer carácter sea distinto de un dígito (0-9) y cuyo 
+    segundo carácter sea "Z": "aZ"... "zZ", "AZ"... "ZZ", "?Z", "=Z", "*Z"...
+6. ^AB{2,5}C$
+    "ABBC", "ABBBC", "ABBBBC", "ABBBBBC".
+7. ^RS{2,}[3-8]?$
+    El primer carácter debe ser "R". A continuación, deben aparecer obligatoriamente dos 
+    o más "S". Finalmente, puede aparecer o no, un dígito del 3 al 8: "RSS", "RSSS"...
+    "RSS3"... "RSS8", "RSSS3"... "RSSS8"... "RSSSSSSSSSSS7"...
+8. ^COD\d{3}.+$
+    Cualquier valor que contenga en primer lugar "COD", después tres dígitos (0-9) y, 
+    finalmente, uno o más caracteres cualesquiera: "COD645pera", "COD646manzana"...

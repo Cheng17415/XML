@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="fecha">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="usuarios">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fecha_nacimiento" type="fecha"/>
+                            <xs:element name="fecha_registro" type="fecha"/>
+                            <xs:element name="nombre" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

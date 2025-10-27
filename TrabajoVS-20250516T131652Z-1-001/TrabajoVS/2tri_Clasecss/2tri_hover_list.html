@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo con Explicaciones</title>
+    <style>
+        /* Estilos para links */
+        a {
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+
+        a:link {
+            background-color: greenyellow;
+        }
+
+        a:visited {
+            background-color: azure;
+        }
+
+        a:hover {
+            font-size: large;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+        /* Estilos para listas verticales */
+        .vertical ul {
+            display: block;
+            list-style-type: square;
+            margin:10px 0px;
+            width: 120px;
+            background-color: aqua;
+        }
+
+        /* Estilos para listas horizontales */
+        .horizontal ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .horizontal li {
+            display: inline;
+        }
+
+        .horizontal li a {
+            color: white;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .horizontal li a:hover {
+            background-color: #111;
+        }
+
+        /* Estilos para tablas */
+        table {
+            width: 80%;
+            height: 200px;
+            margin: 20px auto;
+        }
+
+        th,td {
+            border: 1px solid black;
+            text-align: center;
+            vertical-align:middle;
+            padding: 10px;
+        }
+
+        .overflow {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #111;
+            overflow-x:scroll ;
+            overflow-y:scroll ;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Página de Ejemplo</h1>
+
+    <!-- Sección de Enlaces -->
+    <section>
+        <h2>Hover, Link, Visited, Active</h2>
+        <p>Pasa el ratón sobre los enlaces y observa los cambios:</p>
+        <a href="#link1">Enlace 1</a><br>
+        <a href="#link2">Enlace 2</a><br>
+        <a href="#link3">Enlace 3</a>
+    </section>
+
+    <!-- Sección de Listas -->
+    <section>
+        <h2 style="background-color: blue;">Listas</h2>
+        <!-- Lista vertical -->
+        <div class="vertical">
+            <h3>Lista Vertical</h3>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+        </div>
+        <!-- Lista horizontal -->
+        <div class="horizontal">
+            <h3>Lista Horizontal</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de Tablas -->
+    <section>
+        <h2>Tablas</h2>
+        <table>
+            <caption>Ejemplo de Tabla</caption>
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+                <td>Dato 3</td>
+            </tr>
+            <tr>
+                <td>Dato 4</td>
+                <td>Dato 5</td>
+                <td>Dato 6</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Desbordamiento -->
+    <section>
+        <h2>Desbordamiento (Overflow)</h2>
+        <div class="overflow">
+            <p>Texto largo que demuestra el desbordamiento en ambas direcciones. Añade más contenido si deseas observar
+                más comportamiento.</p>
+            <p>Más texto para forzar el desplazamiento horizontal y vertical.</p>
+        </div>
+    </section>
+</body>
+
+</html>
+

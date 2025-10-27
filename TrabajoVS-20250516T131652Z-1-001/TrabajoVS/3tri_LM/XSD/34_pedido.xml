@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<pedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="34_pedido.xsd" 
+       número="789" fecha="2023-11-10">
+
+ <datos-proveedor> 
+   <nombre>Electro S.A.</nombre> 
+   <cif>44555666-B</cif> 
+   <teléfono>999888777</teléfono> 
+ </datos-proveedor> 
+
+ <datos-cliente> 
+   <nombre>Tienda XYZ</nombre> 
+   <cif>33111222-A</cif> 
+   <teléfono>333999444</teléfono> 
+ </datos-cliente> 
+
+ <detalle-pedido total="86.12"> 
+   <item código-artículo="ART-101" tipo="Electrónico"> 
+     <descripción>Monitor 4K</descripción> 
+     <cantidad>2</cantidad> 
+     <oferta/> 
+     <pvp>25.12</pvp> 
+   </item> 
+ </detalle-pedido> 
+</pedido> 

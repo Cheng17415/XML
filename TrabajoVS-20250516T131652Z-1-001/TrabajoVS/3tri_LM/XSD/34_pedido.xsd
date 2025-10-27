@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Crear tipos para los precios, articulo, texto, números, teléfono y cif-->
+    <xs:simpleType name="tipoPrecio">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="999" />
+            <xs:totalDigits value="5" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoArticulo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Electrónico" />
+            <xs:enumeration value="Alimentación" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoTexto">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5" />
+            <xs:maxLength value="20" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNúmero">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoTeléfono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCif">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}-[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Crear grupos de atributos tanto para pedidos como para item-->
+    <xs:attributeGroup name="atributosPedido">
+        <xs:attribute name="número" type="tipoNúmero" use="required"/>
+        <xs:attribute name="fecha" type="xs:date" use="required"/>
+        <xs:attribute name="moneda" type="xs:string" fixed="€" />
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="atributosItem">
+        <xs:attribute name="código-artículo" type="xs:string" use="required"/>
+        <xs:attribute name="tipo" type="tipoArticulo" use="required"/>
+    </xs:attributeGroup>
+
+    <!-- Crear sequencias de elementos para item y empresa -->
+    <xs:group name="datosItem">
+        <xs:sequence>
+            <xs:element name="descripción" type="tipoTexto" />
+            <xs:element name="cantidad" type="tipoNúmero"/>
+            <xs:element name="oferta" minOccurs="0"/>
+            <xs:element name="pvp" type="tipoPrecio"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="datosEmpresa">
+        <xs:sequence>
+            <xs:element name="nombre" type="tipoTexto"/>
+            <xs:element name="cif" type="tipoCif"/>
+            <xs:element name="teléfono" type="tipoTeléfono"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:element name="pedido">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datos-proveedor">
+                    <xs:complexType>
+                        <xs:group ref="datosEmpresa"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="datos-cliente">
+                    <xs:complexType>
+                        <xs:group ref="datosEmpresa"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="detalle-pedido">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="item">
+                                <xs:complexType>
+                                    <xs:group ref="datosItem"/>
+                                    <xs:attributeGroup ref="atributosItem"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="total" type="tipoPrecio"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attributeGroup ref="atributosPedido"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prueba de Cumplimentación N-Raya</title>
+
+    <style>
+        #marco {
+            margin: 20px auto;
+            border: none;
+            display: table;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            background-color: lightblue;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>
+        <select id="opciones"></select>
+    </p>
+    <div id="marco"></div>
+
+    <script>
+        let gridSize = 3;
+        let totalRows = (gridSize * 2) + 2;
+        let table = new Array(totalRows);
+        let player1Move = [], player2Move = [];
+        let turn = 1;
+
+        for (let i = 0; i < totalRows; i++) table[i] = new Array(gridSize);
+
+        function cargar() {
+            let destino = document.getElementById("opciones");
+            for (let i = 3; i <= 10; i++) {
+                let option = document.createElement("option");
+                option.text = i;
+                option.value = i;
+                destino.appendChild(option);
+            }
+            destino.addEventListener("change", () => { resetGame(); });
+            resetGame();
+        }
+
+        function updateTable() {
+            gridSize = parseInt(document.getElementById("opciones").value);
+            totalRows = (gridSize * 2) + 2;
+            table = new Array(totalRows);
+
+            for (let i = 0; i < totalRows; i++) {
+                table[i] = new Array(gridSize);
+            }
+
+            let currentRow = 0;
+            for (let row = 0; row < gridSize; row++) {
+                for (let col = 0; col < gridSize; col++) {
+                    table[currentRow][col] = (row * gridSize) + (col + 1);
+                    table[currentRow + gridSize][col] = (col * gridSize) + (row + 1);
+                }
+                currentRow++;
+            }
+
+            currentRow = (gridSize * 2);
+            for (let i = 0; i < gridSize; i++) {
+                table[currentRow][i] = (i * gridSize) + (i + 1);
+                table[currentRow + 1][i] = (i * gridSize) + (gridSize - i);
+            }
+
+            document.getElementById("marco").innerHTML = generateTableHTML();
+        }
+
+        function generateTableHTML() {
+            let html = "<table>";
+            for (let i = 0; i < table[i].length; i++) {
+                html += "<tr>";
+                for (let j = 0; j < table[i].length; j++) {
+                    html += "<td>";
+                    html += `<button onclick="changeImage(this,${i},${j})">
+                                <img src="imagenes/cloudy.png">
+                            </button>`;
+                    html += "</td>";
+                }
+                html += "</tr>";
+            }
+            html += "</table>";
+            return html;
+        }
+
+        function changeImage(button, i, j) {
+            let image = button.children[0];
+            if (!image.src.endsWith('imagenes/cloudy.png')) return;
+
+            if (turn === 1) {
+                image.src = 'imagenes/sun.png';
+                player1Move.push(table[i][j]);
+            } else {
+                image.src = 'imagenes/moon.png';
+                player2Move.push(table[i][j]);
+            }
+
+            checkSolutions(turn === 1 ? player1Move : player2Move);
+            turn = turn === 1 ? 2 : 1;
+        }
+
+
+        function checkSolutions(playerMove) {
+            if (playerMove.length < gridSize) return;
+
+            for (let i = 0; i < table.length; i++) {
+                let contador = 0;
+                for (let j = 0; j < table[i].length; j++) {
+                    if (playerMove.includes(table[i][j])) contador++;
+
+                    if (contador == gridSize) {
+                        setTimeout(() => {
+                            alert(`Jugador ${turn === 1 ? 2 : 1} ha ganado!`);
+                            resetGame();
+                        }, 500);
+                        return;
+                    }
+                }
+            }
+
+            if (player1Move.length + player2Move.length === gridSize * gridSize) {
+                setTimeout(() => {
+                    alert(`Empate`);
+                    resetGame();
+                }, 500);
+            }
+        }
+        function resetGame() {
+            player1Move = [];
+            player2Move = [];
+            turn = 1;
+            updateTable();
+        }
+
+        window.addEventListener("load", () => { cargar(); });
+    </script>
+</body>
+
+</html>

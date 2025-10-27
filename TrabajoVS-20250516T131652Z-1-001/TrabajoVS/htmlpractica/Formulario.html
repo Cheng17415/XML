@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], button {
+            background-color: #1b5bc0c1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #007cc9;
+        }
+
+</style>
+<body>
+    <h1>Formulario</h1>
+    <form action="" method="post">
+        <fieldset>
+            <!--Nombre-->
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required>
+            <br>
+            <!--Apellido-->
+            <label for="apellido">Apellido</label>
+            <input type="text" name="Apellido" id="Apellido">
+            <br>
+            <!--Correo-->
+            <label for="correo">Correo</label>
+            <input type="email" name="correo" id="correo">
+            <br>
+            <!--Contraseña-->
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña">
+            <br>
+            <!--Teléfono-->
+            <label for="teléfono">Teléfono</label>
+            <input type="tel" name="contraseña" id="contraseña">
+            <br>
+            <!--Fecha Nacimiento-->
+            <label for="Fecha_Nacimiento">Fecha de Nacimiento</label>
+            <input type="date" name="Fecha_Nacimiento" id="Fecha_Nacimiento">
+            <br>
+            <!--Edad-->
+            <label for="Edad">Edad</label>
+            <input type="number" name="Edad" id="Edad">
+        <br>
+            </fieldset>
+        <br>
+            <fieldset>
+                <legend>Preferencias</legend>
+                <!--Color-->
+                <label for="color">Color</label>
+                <input type="color"name="Color" id="Color">
+                <br>
+                <!--URL-->
+                <label for="página_web">Página web</label>
+                <input type="url" name="página_web" id="página_web" placeholder="https://mipáginaweb.com">
+                <br>
+                <!--Género-->
+                <label for="Género">Género</label>
+                <select name="género" id="género">
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <br>
+                <!-- Hobbies -->
+                 <label for="Hobbies">Hobbies</label>
+                 <input type="checkbox" name="Hobbies" id="Hobby1">
+                 <label for="hobby1">Deportes</label>
+                 <input type="checkbox" name="Hobbies" id="Hobby2">
+                 <label for="hobby2">Lectura</label>
+                 <input type="checkbox" name="Hobbies" id="Hobby3">
+                 <label for="hobby3">Viajar</label>
+            </fieldset>
+            <fieldset>
+                <legend>Otros datos</legend>
+                <!--Prefencias de Contacto--> 
+                <label for="PreferenciasContacto">Preferencias de Contacto</label>
+                <input type="radio" name="CContacto" id="">
+                <label for="CEmail">Correo Electrónico</label>
+                <input type="radio" name="CContacto" id="">
+                <label for="radio">Teléfono</label>
+                <br>
+                <!--Mensajes-->
+                <label for="mensaje">Información adicional</label>
+                <textarea name="mensaje" id="mensaje" rows="5" cols="30" placeholder="Introduce aquí tus comentarios"></textarea>
+                <br>
+                <!--Archivos-->
+                <label for="archivo">Archivo</label>
+                <input type="file"name="archivo" id="archivo">
+                <br>
+                <!--Satisfacción-->
+                <label for="satisfacción">Satisfacción con nuestro servicio</label>
+                <input type="range" name="Satisfacción" id="Satisfacción" min="0" max="5">
+            </fieldset>
+            <fieldset>
+                <legend>Acciones</legend>
+                <!--Acciones-->
+                <input type="submit" value="enviar">
+                <input type="reset" value="borrar">
+            </fieldset>
+    </form>
+
+</body>
+</html>

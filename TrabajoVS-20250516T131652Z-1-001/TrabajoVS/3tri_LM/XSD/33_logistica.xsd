@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:attributeGroup name="atrEnvio">
+        <xs:attribute name="codigo">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="ENV-\d{3}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="estado" default="E">
+            <xs:simpleType>
+                <xs:restriction base="xs:string" >
+                    <xs:enumeration value="E" ></xs:enumeration>
+                    <xs:enumeration value="T"></xs:enumeration>
+                    <xs:enumeration value="R"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:group name="datoEnvio">
+        <xs:sequence>
+            <xs:element name="diario" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:element name="logistica">
+        
+    </xs:element>
+</xs:schema>

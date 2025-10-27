@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE vehiculo [ 
+  <!ELEMENT vehiculo (marca, especificaciones, cilindrada)> 
+  <!ELEMENT especificaciones (color, puertas)>
+    <!ELEMENT color (#PCDATA)>
+    <!ELEMENT puertas (#PCDATA)>
+  <!ELEMENT marca (#PCDATA)> 
+  <!ELEMENT cilindrada (#PCDATA)> 
+  
+]>
+
+<vehiculo> 
+  <marca>Ford</marca> 
+  <especificaciones> 
+     <color>rojo</color> 
+     <puertas>4</puertas> 
+  </especificaciones> 
+  <cilindrada>2000</cilindrada> 
+</vehiculo> 

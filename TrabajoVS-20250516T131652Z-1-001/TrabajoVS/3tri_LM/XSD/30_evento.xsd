@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:attributeGroup name="datosEventos">
+        <xs:attribute name="tipo" type="xs:string"/>
+        <xs:attribute name="fecha" type="xs:date" use="required"/>
+        <xs:attribute name="lugar" type="xs:string" use="required"/>
+        <xs:attribute name="capacidad" type="xs:integer"/>
+    </xs:attributeGroup>
+    
+    <xs:element name="evento">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tema" type="xs:string"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="datosEventos"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

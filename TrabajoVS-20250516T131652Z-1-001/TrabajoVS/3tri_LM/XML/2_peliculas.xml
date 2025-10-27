@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<peliculas>
+    <pelicula genero="ciencia ficción">
+        <titulo>Inception</titulo>
+        <director>Christopher Nolan</director>
+        <anio>2010</anio>
+        <duracion>148</duracion>
+    </pelicula>
+    <pelicula genero="suspense">
+        <titulo>Parasite</titulo>
+        <director>Bong Joon-ho</director>
+        <anio>2019</anio>
+        <duracion>132</duracion>
+    </pelicula>
+    <pelicula genero="drama">
+        <titulo>El Padrino</titulo>
+        <director>Francis Ford Coppola</director>
+        <anio>1972</anio>
+        <duracion>175</duracion>
+    </pelicula>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE paises [ 
+  <!ELEMENT paises (pais+)> 
+  <!ELEMENT pais (nombre, capital?)> 
+  <!ELEMENT nombre (#PCDATA)> 
+  <!ELEMENT capital EMPTY> 
+]>
+
+<paises> 
+  <pais> 
+     <nombre>Argentina</nombre> 
+     <capital/> 
+  </pais> 
+  <pais> 
+     <nombre>México</nombre> 
+  </pais> 
+  <pais> 
+     <nombre>Italia</nombre> 
+     <capital/> 
+  </pais> 
+</paises> 

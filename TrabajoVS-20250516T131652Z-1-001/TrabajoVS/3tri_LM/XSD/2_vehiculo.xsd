@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tipo" type="xs:string" fixed="Electrónico"/>
+    <xs:element name="garantia_anios" type="xs:integer" default="2"/>
+</xs:schema>

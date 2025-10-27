@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="18_empresa.xsd">
+    <empleado>
+        <datosContacto>
+            <nombre>Juan Pérez</nombre>
+            <email>juan@example.com</email>
+            <telefono>+1-555-1234</telefono>
+        </datosContacto>
+        <departamento>IT</departamento>
+    </empleado>
+    <cliente>
+        <datosContacto>
+            <nombre>María Gómez</nombre>
+            <email>maria@example.com</email>
+            <telefono>+1-555-5678</telefono>
+        </datosContacto>
+        <historial_compras>2023-01-15</historial_compras>
+    </cliente>
+</empresa>
+   

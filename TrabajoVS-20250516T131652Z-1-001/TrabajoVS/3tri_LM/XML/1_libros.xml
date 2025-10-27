@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libros>
+    <libro titulo="Cien años de soledad">
+        <autor>Gabriel García Márquez</autor>
+        <anio>1967</anio>
+        <genero>realista mágico</genero>
+    </libro>
+    <libro titulo ="1984">
+        <autor>George Orwell</autor>
+        <anio>1949</anio>
+        <genero>distópico</genero>
+    </libro>
+    <libro titulo="El gran Gatsby">
+        <autor>F. Scott Fitzgerald</autor>
+        <anio>1925</anio>
+        <genero>clásico</genero>
+    </libro>   
+</libros>

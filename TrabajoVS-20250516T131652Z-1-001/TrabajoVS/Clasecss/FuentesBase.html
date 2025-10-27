@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades CSS: Fuentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .example {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        /* ===========================
+           font-family
+           - Define la familia tipográfica del texto.
+           - Valores comunes:
+             - serif: Fuentes con remates (e.g., Times New Roman, Georgia).
+             - sans-serif: Fuentes sin remates (e.g., Arial, Verdana).
+             - monospace: Fuentes de ancho fijo (e.g., Courier New).
+        =========================== */
+        .font-georgia {
+            font-family: Georgia, serif;
+        }
+
+        /* Fuente serif clásica. */
+        .font-verdana {
+            font-family: Verdana, sans-serif;
+        }
+
+        /* Fuente sans-serif legible en pantallas. */
+        .font-courier {
+            font-family: "Courier New", monospace;
+        }
+
+        /* Fuente monoespaciada. */
+        .font-tahoma {
+            font-family: Tahoma, sans-serif;
+        }
+
+        /* Fuente sans-serif compacta. */
+        .font-times {
+            font-family: "Times New Roman", serif;
+        }
+
+        /* Fuente serif tradicional. */
+
+        /* ===========================
+           font-style
+           - Define el estilo del texto.
+           - Valores comunes:
+             - normal: Estilo por defecto, sin cursiva.
+             - italic: Texto en cursiva.
+             - oblique: Texto inclinado, menos usado que italic.
+             - inherit: Hereda el valor del elemento padre.
+        =========================== */
+        .style-italic {
+            font-style: italic;
+        }
+
+        /* Texto en cursiva. */
+        .style-oblique {
+            font-style: oblique;
+        }
+
+        /* Texto inclinado. */
+        .style-initial {
+            font-style: initial;
+        }
+
+        /* Restaura el valor inicial (normal). */
+        .style-inherit {
+            font-style: inherit;
+        }
+
+        /* Hereda el estilo del padre. */
+        .style-custom {
+            font-style: oblique 15deg;
+        }
+
+        /* Texto inclinado a 15 grados. */
+
+        /* ===========================
+           font-weight
+           - Define el grosor del texto.
+           - Valores comunes:
+             - normal: Peso estándar.
+             - bold: Negrita.
+             - lighter: Más delgado que el texto normal.
+             - bolder: Más grueso que el texto normal.
+             - numérico (100-900): Valores específicos (100 más delgado, 900 más grueso).
+        =========================== */
+        .weight-bold {
+            font-weight: bold;
+        }
+
+        /* Negrita estándar. */
+        .weight-bolder {
+            font-weight: bolder;
+        }
+
+        /* Más grueso que el peso heredado. */
+        .weight-lighter {
+            font-weight: lighter;
+        }
+
+        /* Más delgado que el peso heredado. */
+        .weight-100 {
+            font-weight: 100;
+        }
+
+        /* Texto muy delgado. */
+        .weight-900 {
+            font-weight:0;
+        }
+
+        /* Texto muy grueso. */
+
+        /* ===========================
+           font-size
+           - Define el tamaño del texto.
+           - Valores comunes:
+             - px: Tamaño en píxeles (fijo).
+             - em: Relativo al tamaño del texto padre.
+             - %: Relativo al tamaño base.
+             - small, medium, large, etc.: Palabras clave.
+        =========================== */
+        .size-small {
+            font-size: 12px;
+        }
+
+        /* Texto pequeño (12 píxeles). */
+        .size-medium {
+            font-size: 16px;
+        }
+
+        /* Tamaño estándar (16 píxeles). */
+        .size-large {
+            font-size: 24px;
+        }
+
+        /* Texto grande (24 píxeles). */
+        .size-xlarge {
+            font-size: 32px;
+        }
+
+        /* Texto muy grande (32 píxeles). */
+        .size-xxlarge {
+            font-size: 48px;
+        }
+
+        /* Texto extra grande (48 píxeles). */
+    </style>
+</head>
+
+<body>
+    <h1>Propiedades CSS: Fuentes</h1>
+
+    <section>
+        <h2>1. font-family</h2>
+        <p class="example font-georgia">Texto con font-family: Georgia, serif.</p>
+        <p class="example font-verdana">Texto con font-family: Verdana, sans-serif.</p>
+        <p class="example font-courier">Texto con font-family: "Courier New", monospace.</p>
+        <p class="example font-tahoma">Texto con font-family: Tahoma, sans-serif.</p>
+        <p class="example font-times">Texto con font-family: "Times New Roman", serif.</p>
+    </section>
+
+    <section>
+        <h2>2. font-style</h2>
+        <p class="example style-italic">Texto con font-style: italic.</p>
+        <p class="example style-oblique">Texto con font-style: oblique.</p>
+        <p class="example style-initial">Texto con font-style: initial.</p>
+        <p class="example style-inherit">Texto con font-style: inherit.</p>
+        <p class="example style-custom">Texto con font-style: oblique 15deg (personalizado).</p>
+    </section>
+
+    <section>
+        <h2>3. font-weight</h2>
+        <p class="example weight-bold">Texto con font-weight: bold.</p>
+        <p class="example weight-bolder">Texto con font-weight: bolder.</p>
+        <p class="example weight-lighter">Texto con font-weight: lighter.</p>
+        <p class="example weight-100">Texto con font-weight: 100 (muy delgado).</p>
+        <p class="example weight-900">Texto con font-weight: 900 (muy grueso).</p>
+    </section>
+
+    <section>
+        <h2>4. font-size</h2>
+        <p class="example size-small">Texto con font-size: 12px.</p>
+        <p class="example size-medium">Texto con font-size: 16px.</p>
+        <p class="example size-large">Texto con font-size: 24px.</p>
+        <p class="example size-xlarge">Texto con font-size: 32px.</p>
+        <p class="example size-xxlarge">Texto con font-size: 48px.</p>
+    </section>
+</body>
+
+</html>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE componentes [ 
+  <!ELEMENT componentes (categorias)> 
+  <!ELEMENT categorias ANY> 
+  <!ELEMENT tipo (#PCDATA)> 
+]>
+
+<componentes>
+    <categorias> 
+        <tipo>electrónicos</tipo> 
+        Accesorios 
+        <tipo>muebles</tipo> 
+    </categorias> 
+</componentes>

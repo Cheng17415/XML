@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:group name="datosPersona">
+        <xs:sequence>
+            <xs:element name="nombre-completo" type="xs:string" />
+            <xs:element name="correo" type="xs:string" />
+        </xs:sequence>
+    </xs:group>
+
+    <xs:attributeGroup name="horarios">
+        <xs:attribute name="fecha" type="xs:date" use="required" />
+        <xs:attribute name="hora" type="xs:time" use="required"/>
+    </xs:attributeGroup>
+
+    <xs:group name="datosSesiones">
+        <xs:sequence>
+            <xs:element name="sesiones">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="sesión" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:positiveInteger">
+                                        
+                                        <xs:attributeGroup ref="horarios" />
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:element name="registro">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="usuario" maxOccurs="unbounded">
+                    <xs:complexType>
+
+                        <xs:sequence>
+                            <xs:group ref="datosPersona" />
+                            <xs:group ref="datosSesiones"/>
+                        </xs:sequence>
+
+                        <xs:attribute name="identificador" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="US-\d{3}" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="colaborador" maxOccurs="unbounded">
+                    <xs:complexType>
+
+                        <xs:sequence>
+                            <xs:group ref="datosPersona" />
+                            <xs:sequence>
+                                <xs:element name="departamento">
+                                    <xs:complexType>
+                                        <xs:choice>
+                                            <xs:element name="ventas" />
+                                            <xs:element name="soporte"/>
+                                            <xs:element name="RRHH" />
+                                        </xs:choice>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:group ref="datosSesiones" />
+                        </xs:sequence>
+
+                        <xs:attribute name="identificador" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="CL-\d{3}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

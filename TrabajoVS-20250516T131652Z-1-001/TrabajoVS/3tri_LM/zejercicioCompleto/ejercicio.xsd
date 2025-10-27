@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="tipo_prestado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="si"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:group name="info_libro">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="autor">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="pais" type="xs:string" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="anno" type="xs:string" minOccurs="0"/>
+            <xs:element name="genero" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="estado" minOccurs="0">
+                <xs:complexType>
+                    <xs:attributeGroup ref="atr_estado"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="idioma" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="edicion" type="xs:string" minOccurs="0"/>
+            <xs:element name="sinopsis" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:attributeGroup name="atr_estado">
+        <xs:attribute name="prestado" type="tipo_prestado"/>
+        <xs:attribute name="fecha_devolucion" type="xs:date"/>
+    </xs:attributeGroup>
+
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:group ref="info_libro"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

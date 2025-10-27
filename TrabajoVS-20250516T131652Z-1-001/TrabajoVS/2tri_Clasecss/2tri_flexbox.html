@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de CSS Flexbox</title>
+
+    <style>
+        /* ===================================================== */
+        /*            Conceptos Generales de Flexbox           */
+        /* ===================================================== */
+        /* Flexbox permite crear diseños unidimensionales, en los cuales
+       los elementos (ítems) se distribuyen en un contenedor flexible.
+       El eje principal se define con flex-direction y, de forma predeterminada,
+       es horizontal (row). El eje secundario es perpendicular (vertical).
+    */
+
+        /* Estilos base para todos los contenedores flex y sus ítems */
+        .flex-container {
+            display: flex;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        .flex-container>div {
+            background-color: green;
+            color: white;
+            margin: 5px;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* ===================================================== */
+        /*                Flex Direction                       */
+        /* ===================================================== */
+        /* La propiedad flex-direction define la dirección del eje principal.
+       Valores: row (horizontal, por defecto), column (vertical),
+       row-reverse (fila invertida) y column-reverse (columna invertida).
+    */
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .flex-column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        /* ===================================================== */
+        /*                  Flex Wrap                          */
+        /* ===================================================== */
+        /* flex-wrap determina si los ítems se muestran en múltiples líneas.
+       Valores: nowrap (sin envoltura, valor por defecto), wrap (con envoltura),
+       wrap-reverse (envoltura en orden inverso).
+    */
+        .wrap-nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        /* ===================================================== */
+        /*              Justify Content                        */
+        /* ===================================================== */
+        /* justify-content alinea los ítems a lo largo del eje principal.
+       Valores: flex-start, flex-end, center, space-between, space-around, space-evenly.
+    */
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        .justify-space-around {
+            justify-content: space-around;
+        }
+
+        .justify-space-evenly {
+            justify-content: space-evenly;
+        }
+
+        /* ===================================================== */
+        /*                Align Items                          */
+        /* ===================================================== */
+        /* align-items alinea los ítems a lo largo del eje secundario (por defecto vertical).
+       Valores: flex-start, flex-end, center, baseline, stretch (valor por defecto).
+    */
+        .align-flex-start {
+            align-items: flex-start;
+        }
+
+        .align-flex-end {
+            align-items: flex-end;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .align-baseline {
+            align-items: baseline;
+        }
+
+        .align-stretch {
+            align-items: stretch;
+        }
+
+        /* ===================================================== */
+        /*              Align Content                          */
+        /* ===================================================== */
+        /* align-content se utiliza en contenedores flex multilinea para alinear las líneas
+       del contenedor. Valores: flex-start, flex-end, center, space-between, space-around, stretch.
+    */
+        .content-flex-start {
+            align-content: flex-start;
+        }
+
+        .content-flex-end {
+            align-content: flex-end;
+        }
+
+        .content-center {
+            align-content: center;
+        }
+
+        .content-space-between {
+            align-content: space-between;
+        }
+
+        .content-space-around {
+            align-content: space-around;
+        }
+
+        .content-stretch {
+            align-content: stretch;
+        }
+
+        /* ===================================================== */
+        /*                Align Self                           */
+        /* ===================================================== */
+        /* align-self permite alinear un ítem individualmente, sobreescribiendo la alineación
+       definida por align-items en el contenedor.
+       Valores: auto (hereda), flex-start, flex-end, center, baseline, stretch.
+    */
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+
+        .align-self-center {
+            align-self: center;
+        }
+
+        .align-self-baseline {
+            align-self: baseline;
+        }
+
+        .align-self-stretch {
+            align-self: stretch;
+        }
+
+        /* ===================================================== */
+        /*                Ejemplos Prácticos                 */
+        /* ===================================================== */
+
+        /* Ejemplo 1: Flex Direction */
+        /* Muestra la diferencia entre row, column, row-reverse y column-reverse */
+
+        /* Ejemplo 2: Flex Wrap */
+        /* En contenedores con ancho limitado, flex-wrap controla si los ítems se muestran en varias líneas */
+
+        /* Ejemplo 3: Justify Content */
+        /* Distribución de ítems a lo largo del eje principal */
+
+        /* Ejemplo 4: Align Items */
+        /* Alineación de ítems a lo largo del eje secundario */
+
+        /* Ejemplo 5: Align Content */
+        /* Alineación de las líneas en un contenedor flex multilinea */
+
+        /* Ejemplo 6: Align Self */
+        /* Alineación individual de un ítem diferente del resto */
+    </style>
+</head>
+
+<body>
+    <h1>CSS Flexbox: Ejemplos y Conceptos</h1>
+    <p>Flexbox es un sistema de maquetación que organiza los elementos en una sola dimensión (fila o columna) y facilita la creación de diseños flexibles y responsivos.</p>
+
+    <!-- ===================================================== -->
+    <!--               Ejemplo: Flex Direction               -->
+    <!-- ===================================================== -->
+    <h2>Flex Direction</h2>
+    <p><strong>row</strong> (por defecto): Los ítems se organizan de izquierda a derecha.</p>
+    <div class="flex-container flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>column</strong>: Los ítems se organizan de arriba hacia abajo.</p>
+    <div class="flex-container flex-column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>row-reverse</strong>: Los ítems se organizan de derecha a izquierda.</p>
+    <div class="flex-container flex-row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>column-reverse</strong>: Los ítems se organizan de abajo hacia arriba.</p>
+    <div class="flex-container flex-column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!--                  Ejemplo: Flex Wrap                 -->
+    <!-- ===================================================== -->
+    <h2>Flex Wrap</h2>
+    <p><strong>nowrap</strong> (valor por defecto): Los ítems se muestran en una sola línea.</p>
+    <div class="flex-container wrap-nowrap" style="width:300px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <p><strong>wrap</strong>: Los ítems se muestran en nuevas líneas si es necesario.</p>
+    <div class="flex-container wrap" style="width:300px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <p><strong>wrap-reverse</strong>: Los ítems se muestran en nuevas líneas, pero en orden inverso.</p>
+    <div class="flex-container wrap-reverse" style="width:300px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!--              Ejemplo: Justify Content               -->
+    <!-- ===================================================== -->
+    <h2>Justify Content (Alineación en el eje principal)</h2>
+    <p><strong>flex-start</strong>: Alinea los ítems al inicio (valor por defecto).</p>
+    <div class="flex-container justify-flex-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>flex-end</strong>: Alinea los ítems al final.</p>
+    <div class="flex-container justify-flex-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>center</strong>: Centra los ítems en el eje principal.</p>
+    <div class="flex-container justify-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>space-between</strong>: Distribuye los ítems con espacio igual entre ellos, sin espacio en los extremos.
+    </p>
+    <div class="flex-container justify-space-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>space-around</strong>: Distribuye los ítems con espacio igual alrededor de cada uno.</p>
+    <div class="flex-container justify-space-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>space-evenly</strong>: Distribuye los ítems con espacios uniformes entre ellos y los extremos.</p>
+    <div class="flex-container justify-space-evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!--                Ejemplo: Align Items                 -->
+    <!-- ===================================================== -->
+    <h2>Align Items (Alineación en el eje secundario)</h2>
+    <p><strong>flex-start</strong>: Alinea los ítems al inicio del contenedor.</p>
+    <div class="flex-container align-flex-start" style="height:150px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>flex-end</strong>: Alinea los ítems al final del contenedor.</p>
+    <div class="flex-container align-flex-end" style="height:150px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>center</strong>: Centra verticalmente los ítems.</p>
+    <div class="flex-container align-center" style="height:150px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>baseline</strong>: Alinea los ítems según la línea base del texto.</p>
+    <div class="flex-container align-baseline" style="height:150px;">
+        <div style="font-size:14px;">1</div>
+        <div style="font-size:40px;">2</div>
+        <div style="font-size:18px;">3</div>
+    </div>
+
+    <p><strong>stretch</strong>: Estira los ítems para llenar el contenedor (valor por defecto de align-items si no se
+        especifica otro).</p>
+    <div class="flex-container align-stretch" style="height:150px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!--               Ejemplo: Align Content                -->
+    <!-- ===================================================== -->
+    <h2>Align Content (Para contenedores flex multilinea)</h2>
+    <p>Esta propiedad alinea las líneas de ítems en un contenedor flex que tiene más de una línea.</p>
+    <p><strong>center</strong>: Centra las líneas verticalmente.</p>
+    <div class="flex-container content-center wrap" style="height:200px; width:300px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <p><strong>space-between</strong>: Distribuye las líneas con espacio igual entre ellas.</p>
+    <div class="flex-container content-space-between wrap" style="height:200px; width:300px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!--                 Ejemplo: Align Self                -->
+    <!-- ===================================================== -->
+    <h2>Align Self (Alineación Individual)</h2>
+    <p>Permite alinear un ítem individualmente, ignorando la alineación definida en el contenedor.</p>
+    <div class="flex-container align-center" style="height:150px;">
+        <div>1</div>
+        <div class="align-self-flex-end">2 (align-self: flex-end)</div>
+        <div>3</div>
+    </div>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="10_inventario.xsd"> 
+  <producto categoria="Electrónica"> 
+     <codigo>COD-001</codigo> 
+     <nombre>Smartphone XYZ</nombre> 
+  </producto> 
+  <producto categoria="Hogar"> 
+     <codigo>COD-002</codigo> 
+     <nombre>Aspiradora</nombre> 
+  </producto> 
+  <producto categoria="Deportes"> 
+     <codigo>COD-003</codigo> 
+     <nombre>Zapatillas</nombre> 
+  </producto> 
+</inventario> 

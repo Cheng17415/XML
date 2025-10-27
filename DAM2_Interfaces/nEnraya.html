@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N en raya</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: none;
+            border-collapse: collapse;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body onload="cargar()">
+    <select id="opciones"></select>
+    <div id="js-div"></div>
+
+    <script>
+        let nRaya = Number(document.querySelector("#opciones").value);
+        let solu = soluciones(nRaya);
+        let turno = 1;
+        let jug1Solucion = [];
+        let jug2Solucion = [];
+
+        let gridSize = 4;
+        let totalRows = (nfc * 2) + 2;
+        let table = new Array(filas);
+        for (let i = 0; i < totalRows; i++)table[i] = new Array(gridSize);
+        
+
+        //Comprobar si ya se ha dado click o no
+        function isClicked(i, j) {
+            let botonElem = document.getElementById(`btn${i}${j}`);
+            if (!botonElem.classList.contains('clicked')) {
+                botonElem.classList.add('clicked');
+                return false;
+            }
+            return true;
+        }
+
+        //Cambiar imagen
+        function changeImage(i, j) {
+            if (isClicked(i, j)) return;
+            let img = document.getElementById(`img${i}${j}`).src = `img/cat${turno}.png`;
+            if (turno === 1) {
+                jug1Solucion.push(solu[i][j]);
+                checkSolutions(jug1Solucion);
+                turno = 2;
+            } else {
+                jug2Solucion.push(solu[i][j]);
+                checkSolutions(jug2Solucion);
+                turno = 1;
+            }
+        }
+
+        //Comprueba las soluciones
+        function checkSolutions(jugArray) {
+            if (jugArray.length < nRaya) return;
+            for (let i = 0; i < solu.length; i++) {
+                let contador = 0;
+                for (let j = 0; j < solu[i].length; j++) {
+                    if (!jugArray.includes(solu[i][j])) continue;
+                    contador++;
+
+                    if (contador == nRaya) {
+                        setTimeout(() => {
+                            alert(`Jugador ${turno} ha ganado!`);
+                        }, 500);
+                        break;
+                    }
+                }
+            }
+        }
+
+        //Resetear tablero
+        function resetTablero() {
+            turno = 1;
+        }
+
+        //Cargar las opciones
+        function cargar() {
+            const destino = document.getElementById('opciones');
+            for (let i = 3; i <= 10; i++) {
+                const opt = document.createElement("opcion");
+                opt.text = i;
+                opt.value = i;
+                destino.appendChild(opt);
+            }
+            destino.addEventListener("change", () => { updateTable(); });
+            updateTable();
+        }
+
+       function updateTable() {
+            let gridSize = parseInt(document.getElementById("opciones").value);
+            let totalRows = (gridSize * 2) + 2;
+            let table = new Array(totalRows);
+
+            for (let row = 0; row < totalRows; row++) {
+                table[row] = new Array(gridSize);
+            }
+
+            let currentRow = 0;
+            for (let row = 0; row < gridSize; row++) {
+                for (let col = 0; col < gridSize; col++) {
+                    table[currentRow][col] = (row * gridSize) + (col + 1);
+                    table[currentRow + gridSize][col] = (col * gridSize) + (row + 1);
+                }
+                currentRow++;
+            }
+
+            currentRow = (gridSize * 2);
+            for (let i = 0; i < gridSize; i++) {
+                table[currentRow][i] = (i * gridSize) + (i + 1);
+                table[currentRow + 1][i] = (i * gridSize) + (gridSize - i);
+            }
+
+            document.getElementById("marco").innerHTML = generateTableHTML();
+        }
+
+        function generateTableHTML() {
+            let html = "<table align='center' border=none>";
+            for (let i = 0; i < table.length; i++) {
+                html += "<tr>";
+                for (let j = 0; j < table.length; j++) {    
+                    html += "<td>" + table[i][j] + "</td>";
+                }
+                html += "</tr>";
+            }
+            html += "</table>";
+            return html;
+        }
+
+        //Logica del juego
+        function juego() {
+            nRaya = Number(document.querySelector("#opciones").value);
+            solu = soluciones(nRaya);
+            let lineas = lineasHorizontales(nRaya);
+            let str = '<table>';
+            for (let i = 0; i < nRaya; i++) {
+                str += '<tr>'
+                for (let j = 0; j < nRaya; j++) {
+                    str += '<td>';
+
+                    str += `<button id="btn${i}${j}"onclick="changeImage(${i},${j})">
+                            <img id="img${i}${j}"src=img/button.png>
+                           </button>`;
+
+                    str += '</td>';
+                }
+                str += '</tr>'
+            }
+            str += '</table>'
+            document.getElementById("js-div").innerHTML = str;
+        }
+
+        
+        window.addEventListener("load", () => { updateTable(); });
+    </script>
+</body>
+
+</html>

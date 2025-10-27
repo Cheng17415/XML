@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades CSS de Texto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .example {
+            margin: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        /* text-align ejemplos */
+        .align-left {
+            text-align: left;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-justify {
+            text-align: justify;
+        }
+
+        /* text-align-last ejemplos */
+        .last-left {
+            text-align: justify;
+            text-align-last: left;
+        }
+
+        .last-right {
+            text-align: justify;
+            text-align-last: right;
+        }
+
+        .last-center {
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        /* vertical-align ejemplos */
+        .vertical-align {
+            align-items: center;
+            height: 50px;
+            border: 1px solid #ddd;
+        }
+
+        .baseline img {
+            vertical-align: baseline;/*Alinear imagen con texto*/
+        }
+
+        .middle img {
+            vertical-align: center;
+        }
+
+        .top img {
+            vertical-align: top;
+        }
+
+        /* text-decoration ejemplos */
+        .underline {
+            text-decoration: underline;
+        }
+
+        .overline {
+            text-decoration: overline;
+        }
+
+        .line-through {
+            text-decoration: line-through;
+        }
+
+        .no-decoration {
+            text-decoration: none;
+        }
+
+        /* text-transform ejemplos */
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .lowercase {
+            text-transform: lowercase;
+        }
+
+        .no-transform {
+            text-transform: none;
+        }
+
+        /* letter-spacing ejemplos */
+        .spacing-normal {
+            letter-spacing: normal;
+        }
+
+        .spacing-wide {
+            letter-spacing: 2px;
+        }
+
+        .spacing-narrow {
+            letter-spacing: -1px;
+        }
+
+        /* text-shadow ejemplos */
+        .shadow-none {
+            text-shadow: none;
+        }
+
+        .shadow-gray {
+            text-shadow: 2px 2px gray;
+        }
+
+        .shadow-red {
+            text-shadow:1px 1px 5px red;
+        }
+
+        /* font-family ejemplos */
+        .font-arial {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .font-courier {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .font-georgia {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /* font-style ejemplos */
+        .style-normal {
+            font-style: normal;
+        }
+
+        .style-italic {
+            font-style: italic;
+        }
+
+        .style-oblique {
+            font-style: oblique;
+        }
+
+        /* font-weight ejemplos */
+        .weight-normal {
+            font-weight: normal;
+        }
+
+        .weight-bold {
+            font-weight: bold;
+        }
+
+        .weight-lighter {
+            font-weight: bolder;
+        }
+
+        /* font-size ejemplos */
+        .size-small {
+            font-size: 14px;
+        }
+
+        .size-medium {
+            font-size: 1.5em;
+        }
+
+        .size-large {
+            font-size: 200%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Propiedades CSS de Texto</h1>
+
+    <section>
+        <h2>1. text-align</h2>
+        <p class="example align-left">Texto alineado a la izquierda.</p>
+        <p class="example align-right">Texto alineado a la derecha.</p>
+        <p class="example align-center">Texto centrado.</p>
+        <p class="example align-justify">Texto justificado para ocupar todo el ancho del contenedor.</p>
+    </section>
+
+    <section>
+        <h2>2. text-align-last</h2>
+        <p class="example last-left">Texto justificado con la última línea alineada a la izquierda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima voluptatibus, saepe id temporibus cum rem in vero inventore eligendi quasi possimus deserunt repudiandae sequi sed ratione harum repellendus voluptatem consectetur?</p>
+        <p class="example last-right">Texto justificado con la última línea alineada a la derecha. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam aspernatur eius sed officiis dolore ipsa tempore reprehenderit debitis mollitia delectus ratione nemo, quis dignissimos accusamus voluptate amet sit quidem.</p>
+        <p class="example last-center">Texto justificado con la última línea centrada. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, nulla numquam? Possimus quae quas sequi autem distinctio debitis, error dolores cum minus quia in? Repellendus deserunt facilis officiis ea deleniti.</p>
+    </section>
+
+    <section>
+        <h2>3. vertical-align</h2>
+        <div class="vertical-align baseline">
+            <img src="sqpurple.gif" alt="Cuadro púrpura">
+            <span>Texto alineado con la línea base.</span>
+        </div>
+        <div class="vertical-align middle">
+            <img src="sqpurple.gif" alt="Cuadro púrpura">
+            <span>Texto alineado verticalmente al medio.</span>
+        </div>
+        <div class="vertical-align top">
+            <img src="sqpurple.gif" alt="Cuadro púrpura">
+            <span>Texto alineado con la parte superior de la imagen.</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. text-decoration</h2>
+        <p class="example no-decoration">Sin decoración (texto normal).</p>
+        <p class="example underline">Texto subrayado.</p>
+        <p class="example overline">Texto con línea sobrepuesta.</p>
+        <p class="example line-through">Texto tachado.</p>
+    </section>
+
+    <section>
+        <h2>5. text-transform</h2>
+        <p class="example no-transform">Texto sin transformación.</p>
+        <p class="example capitalize">Texto capitalizado.</p>
+        <p class="example uppercase">Texto en mayúsculas.</p>
+        <p class="example lowercase">Texto en minúsculas.</p>
+    </section>
+
+    <section>
+        <h2>6. letter-spacing</h2>
+        <p class="example spacing-normal">Espaciado normal entre letras.</p>
+        <p class="example spacing-wide">Espaciado de 2px entre letras.</p>
+        <p class="example spacing-narrow">Espaciado de -1px entre letras.</p>
+    </section>
+
+    <section>
+        <h2>7. text-shadow</h2>
+        <p class="example shadow-none">Texto sin sombra.</p>
+        <p class="example shadow-gray">Texto con sombra gris.</p>
+        <p class="example shadow-red">Texto con sombra roja.</p>
+    </section>
+
+    <section>
+        <h2>8. font-family</h2>
+        <p class="example font-arial">Texto en Arial.</p>
+        <p class="example font-courier">Texto en Courier New.</p>
+        <p class="example font-georgia">Texto en Georgia.</p>
+    </section>
+
+    <section>
+        <h2>9. font-style</h2>
+        <p class="example style-normal">Texto normal.</p>
+        <p class="example style-italic">Texto en cursiva.</p>
+        <p class="example style-oblique">Texto inclinado.</p>
+    </section>
+
+    <section>
+        <h2>10. font-weight</h2>
+        <p class="example weight-normal">Texto con peso normal.</p>
+        <p class="example weight-bold">Texto en negrita.</p>
+        <p class="example weight-lighter">Texto con peso más ligero.</p>
+    </section>
+
+    <section>
+        <h2>11. font-size</h2>
+        <p class="example size-small">Texto con tamaño de 14px.</p>
+        <p class="example size-medium">Texto con tamaño 1.5em.</p>
+        <p class="example size-large">Texto con tamaño 200%.</p>
+    </section>
+</body>
+
+</html>

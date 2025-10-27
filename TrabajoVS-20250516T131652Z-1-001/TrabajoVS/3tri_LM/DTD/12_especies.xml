@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE especies [
+    <!ELEMENT especies (animal*, habitat)>
+    <!ELEMENT animal (#PCDATA)>
+    <!ATTLIST animal codigo ID #REQUIRED>
+    <!ELEMENT habitat (continente*)>
+    <!ELEMENT continente (#PCDATA)>
+]>
+
+<especies>
+    <animal codigo="A1">León</animal>
+    <animal codigo="A2">Búfalo</animal>
+    <habitat>
+        <continente>África</continente>
+        <continente>Australia</continente>
+    </habitat>
+</especies> 

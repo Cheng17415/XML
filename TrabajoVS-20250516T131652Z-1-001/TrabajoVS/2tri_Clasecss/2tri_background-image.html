@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Degradados, Float, Clear y Overflow</title>
+    <style>
+        /* Degradados lineales */
+        .grad1 {
+            /* Degradado simple de rojo a amarillo en dirección por defecto (de arriba hacia abajo) */
+            height: 100px;
+            margin: 10px 0;
+            background-image: linear-gradient(red, yellow, green);
+        }
+
+        .grad2 {
+            /* Degradado de izquierda a derecha */
+            height: 100px;
+            margin: 10px 0;
+            background-image: linear-gradient(to right, red, yellow, green);
+
+        }
+
+        .grad3 {
+            /* Degradado de esquina superior izquierda a esquina inferior derecha */
+            height: 100px;
+            margin: 10px 0;
+            background-image: linear-gradient(to bottom right, red, yellow, green);
+
+        }
+
+        .grad4 {
+            /* Degradado con dirección explícita en grados (180 grados: de abajo hacia arriba) */
+            height: 100px;
+            margin: 10px 0;
+            background-image: linear-gradient(180deg, red, yellow, green);
+        }
+
+        /* Posicionamiento flotante */
+        .contenedor {
+            margin: auto;
+            width: 500px;
+            border: 1px solid #000;
+
+        }
+
+        .contenedor img {
+            /* Imagen flotante a la izquierda */
+            float: left;
+        }
+
+        .segundo {
+            /* Eliminar el efecto flotante a partir de este punto */    clear: both;
+
+        }
+
+        /* Propiedad overflow */
+        .overflow-visible {
+            /* Contenido visible fuera de los límites */
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            padding: 2%;
+            overflow: visible;
+        }
+
+        .overflow-hidden {
+            /* Oculta contenido que sobrepasa el área del contenedor */
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            padding: 2%;
+            overflow: hidden;
+
+        }
+
+        .overflow-scroll {
+            /* Muestra una barra de desplazamiento para contenido que sobrepasa el área del contenedor */
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            padding: 2%;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS: Degradados, Float, Clear y Overflow</h1>
+
+    <!-- Sección de degradados -->
+    <section>
+        <h2>Degradados</h2>
+        <!-- Ejemplo 1: Degradado de arriba hacia abajo -->
+        <div class="grad1"></div>
+        <!-- Ejemplo 2: Degradado de izquierda a derecha -->
+        <div class="grad2"></div>
+        <!-- Ejemplo 3: Degradado de esquina superior izquierda a inferior derecha -->
+        <div class="grad3"></div>
+        <!-- Ejemplo 4: Degradado con dirección explícita (180 grados) -->
+        <div class="grad4"></div>
+    </section>
+
+    <!-- Sección de posicionamiento flotante -->
+    <section>
+        <h2>Posicionamiento flotante (Float)</h2>
+        <div class="contenedor">
+            <img src="https://cdn-icons-png.flaticon.com/256/1483/1483663.png" alt="Imagen flotante" height="70"
+                width="70">
+            <p>Este texto se ajusta alrededor de la imagen debido al uso de <code>float: left</code> en el estilo de la
+                imagen. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati unde earum accusantium
+                ducimus? Enim magnam iste architecto voluptates pariatur! Deleniti aperiam sint reiciendis alias,
+                excepturi expedita perspiciatis autem minus dolorem..</p>
+            <p class="segundo">Este párrafo comienza después del flotante debido a <code>clear: left</code>.</p>
+            
+        </div>
+    </section>
+
+    <!-- Sección de overflow -->
+    <section>
+        <h2>Propiedad overflow</h2>
+        <div class="overflow-visible">
+            Contenido visible fuera de los límites del contenedor. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore cupiditate sapiente eius sunt maxime, esse et necessitatibus maiores aliquam vero accusantium obcaecati sed sequi minus, doloremque delectus dignissimos repellendus.
+        </div>
+        <div class="overflow-hidden">
+            Contenido oculto que excede los límites del contenedor. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sequi incidunt tempore maxime velit molestiae quo asperiores nulla. Sint aliquam nihil vero dolor non
+            totam culpa ipsum minus neque, quo eos.
+        </div>
+        <div class="overflow-scroll">
+            Contenido con barras de desplazamiento para verlo completo.
+            <br><br>Contenido adicional para hacer scroll.
+        </div>
+    </section>
+</body>
+
+</html>
+

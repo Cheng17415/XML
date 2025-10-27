@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (nombrebiblio,libros,ultima_actualizacion)>
+    <!ELEMENT nombrebiblio (#PCDATA)>
+    <!ELEMENT ultima_actualizacion (#PCDATA)>
+    <!ELEMENT libros (libro+)>
+    <!ELEMENT libro (disponible?, titulo, autor, anno)>
+    <!ATTLIST libro codigo ID #REQUIRED>
+    <!ELEMENT disponible EMPTY>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT anno (#PCDATA)>
+    <!ATTLIST libro estado (D|P|R) "D">
+]>
+<biblioteca>
+    <nombrebiblio>El chanchito</nombrebiblio>
+    <libros>
+        <libro codigo="L01">
+            <disponible/>
+            <titulo>"1984"</titulo>
+            <autor>George Orwell</autor>
+            <anno>1949</anno>
+        </libro>
+        <libro codigo="L02" estado="P">
+            <titulo>"Cien años de soledad"</titulo>
+            <autor>García Márquez</autor>
+            <anno>1967</anno>
+        </libro>
+        <libro codigo="L03" estado="R">
+            <disponible />
+            <titulo>"El Sol de..."</titulo>
+            <autor>Onetti</autor>
+            <anno>1962</anno>
+        </libro>
+    </libros>
+    <ultima_actualizacion>2021-06-01</ultima_actualizacion>
+
+</biblioteca>

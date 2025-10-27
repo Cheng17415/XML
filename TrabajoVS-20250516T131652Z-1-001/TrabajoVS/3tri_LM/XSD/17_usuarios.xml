@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="17_usuarios.xsd">
+
+    <usuario>
+        <fecha_nacimiento>1990-04-22</fecha_nacimiento>
+        <fecha_registro>2023-08-15</fecha_registro>
+        <nombre>Juan Pérez</nombre>
+    </usuario>
+
+    <usuario>
+        <fecha_nacimiento>1985-11-03</fecha_nacimiento>
+        <fecha_registro>2022-06-10</fecha_registro>
+        <nombre>Ana Gómez</nombre>
+    </usuario>
+</usuarios>

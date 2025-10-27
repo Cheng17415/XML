@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Formularios y Estilos CSS</title>
+    <style>
+        /* Formularios: Estilo general para inputs */
+
+        input {
+            width: 70%;
+        }
+
+        /* Input de texto */
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0px;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+        }
+
+        /* Focus: cuando el input tiene el foco */
+        input[type=text]:focus {
+            background-color: chocolate;
+        }
+
+        /* Botones */
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            background-color: aqua;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor:pointer;
+        }
+
+        input[type=button]:hover {
+            background-color: yellow;
+
+        }
+
+         /* Inputs con imágenes */
+        input[type=search] {
+            background-color: antiquewhite;
+            background-image: url('./home_white_48dp.svg');
+            background-position: 5px 10px;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            padding-left: 20px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Formularios y Estilos con CSS</h1>
+
+    <!-- Ejemplo de inputs -->
+    <section>
+        <h2>Inputs</h2>
+        <p>Campo de texto básico:</p>
+        <input type="text" placeholder="Escribe aquí...">
+
+        <p>Campo de texto con ícono:</p>
+        <input type="search" placeholder="          Buscar...">
+
+        <p>Botones:</p>
+        <input type="button" value="Botón">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Restablecer">
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+</head>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #f4f4f4;
+        margin: 40px;
+    }
+    h1{
+        color:#2c3e50;
+        font-weight: bold;
+        text-align: center;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        border: 2px solid red;
+    }
+    .grid-item{
+        background-color: beige;
+        text-align: center;
+        align-content: center;
+        border: 1px solid red;
+        font-size: 20px;
+    }
+    .two-row {
+        grid-row: span 2;
+    }
+    .three-row{
+        grid-row: span 3;
+    }
+    .two-col{
+        grid-column: span 2;
+    }
+    .five-col{
+        grid-column: span 5;
+    }
+    .three-col{
+        grid-column: span 3;
+    }
+    .descanso{
+        background-color: chocolate;
+        color: white;
+    }
+    .blue{
+        background-color: rgb(0, 123, 255);
+        color: white;
+    }
+</style>
+<body>
+   <h1>HORARIO DAM 1</h1>
+        <div class="grid-container">
+            <div class="grid-item blue"></div>
+            <div class="grid-item blue">LUNES</div>
+            <div class="grid-item blue">MARTES</div>
+            <div class="grid-item blue">MIÉRCOLES</div>
+            <div class="grid-item blue">JUEVES</div>
+            <div class="grid-item blue">VIERNES</div>
+            <div class="grid-item blue">8:30-9:25</div>
+            <div class="grid-item">ITINERARIO PERSONAL EMPLEABILIDAD I</div>
+            <div class="grid-item two-row two-col" >SISTEMAS INFORMÁTICOS</div>
+
+            <div class="grid-item two-row">HABILIDADES COMUNIC. INGLÉS</div>
+            <div class="grid-item two-row">LENGUAJE DE MARCAS</div>
+    
+            <div class="grid-item blue">9:25-10:20</div>
+            <div class="grid-item two-row">BASE DE DATOS</div>
+            <div class="grid-item blue">10:20-11:15</div>
+            <div class="grid-item">ITINERARIO PERSONAL EMPLEABILIDAD I</div>
+            <div class="grid-item three-col">PROGRAMACIÓN</div>
+
+            <div class="grid-item blue">11:15-11:45</div>
+            <div class="grid-item five-col descanso">DESCANSO</div>
+            <div class="grid-item blue">11:45-12:40</div>
+            <div class="grid-item">BASE DE DATOS</div>
+            <div class="grid-item">ITINERARIO PERSONAL EMPLEABILIDAD I</div>
+            <div class="grid-item">LENGUAJE DE MARCAS</div>
+            <div class="grid-item three-row">PROGRAMACIÓN</div>
+            <div class="grid-item three-row">BASE DE DATOS</div>
+            <div class="grid-item blue">12:40-13:35</div>
+            <div class="grid-item two-row">SISTEMAS INFORMÁTICOS</div>
+            <div class="grid-item two-row">ENTORNOS DE DESARROLLO</div>
+            <div class="grid-item two-row">PROGRAMACIÓN</div>
+            <div class="grid-item blue">13:35-14:30</div>
+        </div>
+        
+</body>
+</html>

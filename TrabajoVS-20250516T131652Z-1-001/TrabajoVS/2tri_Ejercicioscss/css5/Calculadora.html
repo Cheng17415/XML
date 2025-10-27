@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora la exploradora</title>
+</head>
+<style>
+  
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        box-shadow: 10px 10px gray;
+        width: 300px;
+        border-radius: 10px;
+        background-color: green;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        padding: 10px;
+        margin: 0 auto;
+        
+    }
+    .grid-item{
+        box-shadow: 2px 2px black;
+        border-radius: 20px;    
+        background-color: rgb(11, 72, 4);
+        color: whitesmoke;
+        padding:15px;
+        text-align: center;
+        align-content: center;
+    }
+    .bbc{
+        
+        background-color: black;
+        text-align: end;
+        grid-row: span 2;
+        grid-column: span 4;
+
+    }
+    .two-col{
+        grid-column: span 2;
+    }
+    #grande{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="grid-container">
+        
+        <div class="grid-item bbc">556 +<div id="grande">238</div></div>
+        <div class="grid-item two-col">C</div>
+        <div class="grid-item">←</div>
+        <div class="grid-item">%</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">x</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">+</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">-</div>
+        <div class="grid-item two-col">0</div>
+        <div class="grid-item">.</div>
+        <div class="grid-item">=</div>
+
+    </div>
+</body>
+</html>

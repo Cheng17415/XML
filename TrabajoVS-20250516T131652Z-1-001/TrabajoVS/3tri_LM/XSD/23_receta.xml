@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<receta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="23_receta.xsd"> 
+ Para preparar un <ingrediente>ensalada César</ingrediente>, sigue estos pasos: 
+ <paso>Corta la lechuga en trozos pequeños.</paso> 
+ <paso>Mezcla mayonesa, mostaza y limón.</paso> 
+ Sirve en un plato y decora con queso parmesano. 
+</receta> 

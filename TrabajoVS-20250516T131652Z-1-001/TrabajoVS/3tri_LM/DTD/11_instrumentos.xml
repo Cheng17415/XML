@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instrumentos [
+    <!ELEMENT instrumentos (cuerda, percusion+, viento) >
+    <!ELEMENT cuerda (#PCDATA)>
+        <!ATTLIST cuerda cuerdas CDATA #REQUIRED>
+    <!ELEMENT viento (#PCDATA)>
+    <!ELEMENT percusion (#PCDATA)>
+        <!ATTLIST percusion material CDATA #IMPLIED>
+]>
+
+<instrumentos>
+    <cuerda cuerdas="6">Guitarra</cuerda>
+    <percusion material="madera">Bongos</percusion>
+    <percusion>Marimba</percusion>
+    <viento>Flauta</viento>
+</instrumentos> 

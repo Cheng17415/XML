@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE animales [ 
+  <!ELEMENT animales (mamifero, ave, reptil, otro)+> 
+  <!ELEMENT mamifero (#PCDATA)> 
+     <!ATTLIST mamifero habitat CDATA #REQUIRED> 
+  <!ELEMENT ave (#PCDATA)> 
+     <!ATTLIST ave alas CDATA #IMPLIED> 
+  <!ELEMENT reptil (#PCDATA)> 
+     <!ATTLIST reptil venenoso CDATA #FIXED "no"> 
+  <!ELEMENT otro EMPTY> 
+     <!ATTLIST otro tipo CDATA #REQUIRED> 
+]> 
+
+
+<animales> 
+  <mamifero habitat="selva">Tigre</mamifero> 
+  <ave>Águila</ave> 
+  <reptil>Camaleón</reptil> 
+  <otro tipo="insecto"/> 
+</animales>

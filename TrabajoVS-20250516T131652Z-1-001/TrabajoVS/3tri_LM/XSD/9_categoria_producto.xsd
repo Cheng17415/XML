@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="categoria_producto">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Electrónica"/>
+                <xs:enumeration value="Ropa"/>
+                <xs:enumeration value="Libros"/>
+                <xs:enumeration value="Hogar"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

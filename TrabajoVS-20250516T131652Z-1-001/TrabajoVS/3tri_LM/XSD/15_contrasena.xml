@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<usuarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="15_contrasena.xsd"> 
+  <usuario> 
+     <nombre>ana123</nombre> 
+     <contrasena>Pass123</contrasena> <!-- Inválido: incluye un símbolo --> 
+  </usuario> 
+  <usuario> 
+     <nombre>juan</nombre> 
+     <contrasena>abcde4</contrasena> <!-- Inválido: menos de 6 caracteres --> 
+  </usuario> 
+  <usuario> 
+     <nombre>maria</nombre> 
+     <contrasena>SecurePass12</contrasena> <!-- Inválido: más de 12 caracteres --> 
+  </usuario> 
+  <usuario> 
+     <nombre>carlos</nombre> 
+     <contrasena>clave1234</contrasena> <!-- Válido --> 
+  </usuario> 
+</usuarios> 

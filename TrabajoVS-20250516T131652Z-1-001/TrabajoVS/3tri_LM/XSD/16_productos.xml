@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="16_productos.xsd"> 
+  <producto> 
+     <nombre>Lámpara LED</nombre> 
+     <detalles> 
+        Diseño moderno, 
+        iluminación eficiente. 
+     </detalles> 
+     <poema> 
+       Estos versos, 
+       con saltos de línea. 
+     </poema> 
+  </producto> 
+</productos> 

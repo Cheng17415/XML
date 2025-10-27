@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="13_inventario.xsd"> 
+  <ficha id="01" letra="Z"> 
+     <codigo>11</codigo> 
+     <nombre>Monitor 24"</nombre> 
+  </ficha> 
+  <ficha id="02"> 
+     <codigo>12</codigo> 
+     <nombre>Teclado mecánico</nombre> 
+  </ficha> 
+</fichas> 

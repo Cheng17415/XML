@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades CSS: Bordes y Fondo</title>
+    <style>
+        /* Define el estilo general para el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        /* Estilo para el título principal */
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px red;
+        }
+
+        /* Contenedor de ejemplos */
+        .example {
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        /* text-shadow: sombra al texto */
+        .text-shadow {
+            text-shadow: 4px 4px 6px #aaa;
+        }
+
+        /* background-image: imagen de fondo */
+        .background-image {
+            background-image: url('./sqpurple.gif');
+        }
+
+        /* background-repeat: controla repetición */
+        .background-repeat {
+            background-image: url('./sqpurple.gif');
+            background-repeat:no-repeat;
+        }
+
+        /* background-position: posición de fondo */
+        .background-position {
+            background-image: url('./sqpurple.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* background-attachment: fija el fondo */
+        .background-attachment {
+            background-image: url('./sqpurple.gif');
+            background-attachment: fixed; 
+        }
+
+        /* border: estilos y colores del borde */
+        .border {
+            border: 5px solid blue;
+        }
+
+        /* border-style: estilos de línea */
+        .border-style {
+            border-style:groove
+            ;
+            border-width: 4px;
+        }
+
+        /* border-width: grosor del borde */
+        .border-width {
+            border: 3px solid black;
+            border-width: 10px;
+        }
+
+        /* border-color: define colores para cada lado */
+        .border-color {
+            border-width: 5px;
+            border-style: solid;
+            border-color: red green blue saddlebrown;
+        }
+
+        /* border-top, bottom, left, right con estilos únicos */
+        .border-mixed {
+            border-width: 4px;
+            border-top-style:dotted;
+            border-right-style: solid;
+            border-bottom: dashed;
+            border-left: double;
+        }
+
+        /* border-radius: bordes redondeados */
+        .border-radius {
+            border: 4px solid #333;
+            border-radius: 50% 10% 70% 20%;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Título principal -->
+    <h1>Propiedades CSS: Bordes y Fondo</h1>
+
+    <!-- text-shadow -->
+    <div class="example text-shadow">
+        <strong>text-shadow:</strong> Sombra aplicada al texto. Aquí se usa <code>text-shadow: 4px 4px 6px #aaa;</code>.
+    </div>
+
+    <!-- background-image -->
+    <div class="example background-image">
+        <strong>background-image:</strong> Imagen como fondo. Aquí se usa <code>background-image: url(...);</code>.
+    </div>
+
+    <!-- background-repeat -->
+    <div class="example background-repeat">
+        <strong>background-repeat:</strong> Controla la repetición del fondo. Aquí se usa <code>no-repeat</code>.
+    </div>
+
+    <!-- background-position -->
+    <div class="example background-position">
+        <strong>background-position:</strong> Posiciona el fondo en el centro. Aquí se usa <code>center</code>.
+    </div>
+
+    <!-- background-attachment -->
+    <div class="example background-attachment">
+        <strong>background-attachment:</strong> Fija el fondo al viewport. Aquí se usa <code>fixed</code>.
+    </div>
+
+    <!-- border -->
+    <div class="example border">
+        <strong>border:</strong> Borde sólido azul de 5px. Aquí se usa <code>border: 5px solid blue;</code>.
+    </div>
+
+    <!-- border-style -->
+    <div class="example border-style">
+        <strong>border-style:</strong> Estilos variados (punteado, sólido, discontinuo, doble, surco). Aquí se usa <code>border-style: dotted solid dashed double groove;</code>.
+    </div>
+
+    <!-- border-width -->
+    <div class="example border-width">
+        <strong>border-width:</strong> Grosor del borde. Aquí se usa <code>border-width: 10px;</code>.
+    </div>
+
+    <!-- border-color -->
+    <div class="example border-color">
+        <strong>border-color:</strong> Define colores diferentes para cada lado. Aquí se usa <code>border-color: red green blue yellow;</code>.
+    </div>
+
+    <!-- border-mixed -->
+    <div class="example border-mixed">
+        <strong>border-top/bottom/left/right:</strong> Diferentes estilos de borde por lado. Aquí se usan estilos mixtos.
+    </div>
+
+    <!-- border-radius -->
+    <div class="example border-radius">
+        <strong>border-radius:</strong> Hace los bordes redondeados o circulares. Aquí se usa <code>border-radius: 50%;</code>.
+    </div>
+</body>
+</html>
+
+

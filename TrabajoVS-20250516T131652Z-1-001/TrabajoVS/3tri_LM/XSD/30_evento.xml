@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evento tipo="conferencia" 
+       fecha="2023-11-10" 
+       lugar="Sala Principal" 
+       capacidad="150" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="30_evento.xsd"> 
+ 	<tema>Inteligencia Artificial</tema> 
+</evento> 

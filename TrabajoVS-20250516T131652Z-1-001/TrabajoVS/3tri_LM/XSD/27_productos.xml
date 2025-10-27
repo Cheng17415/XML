@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="27_productos.xsd">
+ <producto> 
+   <nombre>Monitor 27"</nombre> 
+   <precio>299.99</precio> 
+   <marca>ABC</marca> 
+   <categoria>Electrónica</categoria> 
+ </producto> 
+</productos> 

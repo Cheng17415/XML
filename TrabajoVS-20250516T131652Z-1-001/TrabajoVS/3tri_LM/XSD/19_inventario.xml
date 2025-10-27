@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="19_inventario.xsd"> 
+  <producto id="201"> 
+     <nombre>Smartphone</nombre> 
+     <precio>699.99</precio> 
+     <marca>XYZ</marca> 
+     <modelo>ProX</modelo> 
+     <garantia>2 años</garantia> 
+  </producto> 
+</inventario> 
