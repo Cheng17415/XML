@@ -656,5 +656,21 @@ const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "1",
+    image: "images/products/backpack.jpg",
+    name: "BackPack XXL",
+    rating: {
+      stars: 1.5,
+      count: 100
+    },
+    priceCents: 10000,
+    keywords: [
+      "backpack",
+      "XXL",
+      "comfy",
+      "mens"
+    ]
   }
 ];
