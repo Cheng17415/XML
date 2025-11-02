@@ -326,25 +326,24 @@ def ejercicio15():
     print(f"Palabras longitud {i}: {longitudPalabras.get(i,0)}")
     
 ##########################################################################################
-almPersonas = {}
+almPersonas = []
 def introducirPersona():
-  key = len(almPersonas) + 1
-  sexo = ''
-  while sexo not in 'FMN':
-    sexo = input('¿De que sexo eres? (F,M,N) ')
+  sexo = None
+  while sexo not in ('F','M','N'):
+    sexo = input('¿De qué sexo eres? (F,M,N): ').strip().upper()
   try:
     edad = int(input('¿Cuantos anios tienes? '))
     
     while edad < 0:
       edad = int(input('¿Cuantos anios tienes? '))
       
-    almPersonas[key] = {'sexo':sexo, 'edad':edad}
+    almPersonas.append({'numero': len(almPersonas) + 1,'sexo': sexo, 'edad': edad})
   except ValueError:
     print('Error: Tienes que introducir un numero entero')
   
 def leerPersonas():
-  for k,persona in almPersonas.items():
-    print(f"{k}: {persona}")
+  for persona in almPersonas:
+    print(persona)
     
 def ejercicio16():
   opciones = ('1.Introdocir datos de persona', '2.Mostrar datos persona','3.Salir')
@@ -367,49 +366,101 @@ def ejercicio16():
     opc = menu("Ejercicio",opciones)
     
 ##########################################################################################
-import datetime
-
-def introducirFecha(mensaje:str):
-  print(mensaje)
-  anio = 10000
-  mes = 13
-  maxDias = 31
-  dia = 32
-  try:
-    while anio > 9999 or anio < 1:
-      anio = int(input('\tIntroduzca anio: '))
-      
-    while mes > 12 or mes <1:
-      mes = int(input('\tIntroduzca mes en numeros: '))
-      
-    maxDias = (31,30) [mes in [4,6,9,11]]
-
-    if mes == 2:
-      maxDias = 29 if anio % 4 == 0 and (anio % 100 != 0 or anio % 400 == 0) else 28
+class Fecha:
+  def __init__(self,dd:int,mm:int,yy:int):
+    self.dia = dd
+    self.mes = mm
+    self.anno = yy
+    
+  def getFecha(self):
+    return self.anno, self.mes, self.dia
   
-    while dia > maxDias or dia <1:
-      dia = int(input('\tIntroduzca dia: '))
+  def setFecha(self,dd:int,mm:int,yy:int):
+    self.dia = dd
+    self.mes = mm
+    self.anno = yy
+    
+class Cronologia:
+  def __init__(self,nacimiento:Fecha,matrimonio:Fecha,deceso:Fecha):
+    self.nacimiento = nacimiento
+    self.matrimonio = matrimonio
+    self.deceso = deceso
+  
+  def getNacimiento(self):
+    return self.nacimiento.getFecha()
+  def getMatrimonio(self):
+    return self.matrimonio.getFecha()
+  def getDeceso(self):
+    return self.deceso.getFecha()
+    
+  def setNacimiento(self, nacimiento):
+    self.nacimiento = nacimiento
+  def setMatrimonio(self, matrimonio):
+    self.matrimonio = matrimonio
+  def setDeceso(self, deceso):
+    self.deceso = deceso
+    
+def introducirFecha(mensaje:str) -> Fecha:
+  print(mensaje)
+  anio,mes,dia = 0, 0, 0
+  
+  while anio not in range(1,10000):
+    try:
+      anio = int(input('\tIntroduzca anio: '))
+    except ValueError:
+      print('Debes introducir un anio valido')
       
-    fecha = datetime.datetime(anio,mes,dia)
-    return fecha
-  except:
-    print('Debes introducir una fecha valida')
+  while mes not in range(1,13):
+    try:
+      mes = int(input('\tIntroduzca mes en numeros: '))
+    except ValueError:
+      print('Debes introducir un mes valido')
+    
+  maxDias = (31,30) [mes in [4,6,9,11]]
+
+  if mes == 2:
+    maxDias = 29 if anio % 4 == 0 and (anio % 100 != 0 or anio % 400 == 0) else 28
+  
+  while dia not in range(1,maxDias + 1):
+    try:
+      dia = int(input('\tIntroduzca dia: '))
+    except ValueError:
+      print('Debes introducir un dia valido')
+      
+  return Fecha(dia,mes,anio)
+  
     
 def visualizarTodasFechas(fechasTotales:list):
-  for idx,persona in enumerate(fechasTotales):
+  TIPOFECHAS = ('nacimiento','matrimonio','deceso')
+  
+  for idx,crono in enumerate(fechasTotales):
+    getters = {
+      'nacimiento' : crono.getNacimiento,
+      'matrimonio' : crono.getMatrimonio,
+      'deceso' : crono.getDeceso 
+    }
+    
     print(f'\nPersona {idx+1}:')
-    for k,v in persona.items():
-      print(f'\t{k}: {v.year}/{v.month}/{v.day}')
+    for tipoFecha in TIPOFECHAS:
+      fecha = getters[tipoFecha]()
+      print(f'\tFecha de {tipoFecha}: {fecha[0]}/{fecha[1]}/{fecha[2]}')
       decision = input('¿Quieres cambiar la fecha? S/N ')
       if decision.strip().upper() == 'S':
-        fechasTotales[idx][k] = cambioFecha()
+        nuevaFecha = introducirFecha('\nIntroduzca nueva fecha: ')
+        
+        setters = {
+          'nacimiento' : crono.setNacimiento,
+          'matrimonio' : crono.setMatrimonio,
+          'deceso' : crono.setDeceso 
+        }
+        
+        setters[tipoFecha](nuevaFecha)
       
 def introducirDatosPersona(fechasTotales:list):
-    fecha1 = introducirFecha('\nFecha de nacimiento: ')
-    fecha2 = introducirFecha('\nFecha de matrimonio: ')
-    fecha3 = introducirFecha('\nFecha de deceso: ')
-    fechasPersona = {'Fecha Nacimiento' : fecha1,'Fecha Matrimonio' : fecha2, 'Fecha Deceso' : fecha3}
-    fechasTotales.append(fechasPersona)
+    nacimiento = introducirFecha('\nFecha de nacimiento: ')
+    matrimonio = introducirFecha('\nFecha de matrimonio: ')
+    deceso = introducirFecha('\nFecha de deceso: ')
+    fechasTotales.append(Cronologia(nacimiento,matrimonio,deceso))
     
 def ejercicio17():
   fechasTotales = []
@@ -430,15 +481,6 @@ def ejercicio17():
     else:
       print('\tOpción no disponible')      
     input("\nPresione enter para volver al menu...")    
-
-##########################################################################################
-def cambioFecha():
-    try:
-        nuevaFecha = introducirFecha("Introduce la nueva fecha:")
-        return nuevaFecha
-    except:
-        print("Error al introducir la nueva fecha. Inténtalo de nuevo.")
-        return None
 
 ##########################################################################################
 def ejercicio19():
